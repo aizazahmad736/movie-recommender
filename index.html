@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMatch - Advanced Movie Recommendation Simulator</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- LaTeX Math Rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        :root {
+            --bg-color: #080b11;
+            --card-bg: rgba(16, 22, 37, 0.6);
+            --card-hover-border: rgba(99, 102, 241, 0.4);
+            --border-color: rgba(255, 255, 255, 0.06);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --accent-primary: #6366f1;
+            --accent-secondary: #ec4899;
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+            --scifi-color: #3b82f6;
+            --action-color: #ef4444;
+            --romance-color: #ec4899;
+            --comedy-color: #eab308;
+            --thriller-color: #a855f7;
+            --success-color: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 5% 10%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 95% 90%, rgba(236, 72, 153, 0.15) 0%, transparent 40%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2.5rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.03em;
+            display: inline-block;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            font-weight: 300;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Control Panel Card */
+        .glass-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(99, 102, 241, 0.2);
+        }
+
+        .grid-inputs {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid-inputs {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            position: relative;
+        }
+
+        label {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .custom-select {
+            width: 100%;
+            padding: 1.1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 1.05rem;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .custom-select:focus {
+            border-color: var(--accent-primary);
+            background: rgba(255, 255, 255, 0.06);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+        }
+
+        /* Dropdown suggestions list */
+        .suggestions-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #111625;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            max-height: 250px;
+            overflow-y: auto;
+            z-index: 100;
+            display: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            margin-top: 5px;
+        }
+
+        .suggestion-item {
+            padding: 0.9rem 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .suggestion-item:hover {
+            background: rgba(99, 102, 241, 0.15);
+            color: #fff;
+        }
+
+        .suggestion-genre {
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* Toggle switch */
+        .toggle-container {
+            display: flex;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 4px;
+            border-radius: 14px;
+            height: 100%;
+            align-items: center;
+        }
+
+        .toggle-btn {
+            flex: 1;
+            padding: 0.9rem 0.5rem;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .toggle-btn.active {
+            background: var(--accent-gradient);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        /* Selected Movie View */
+        .selected-movie-box {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .selected-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .scifi-badge { background: rgba(59, 130, 246, 0.15); color: var(--scifi-color); border: 1px solid rgba(59, 130, 246, 0.3); }
+        .action-badge { background: rgba(239, 68, 68, 0.15); color: var(--action-color); border: 1px solid rgba(239, 68, 68, 0.3); }
+        .romance-badge { background: rgba(236, 72, 153, 0.15); color: var(--romance-color); border: 1px solid rgba(236, 72, 153, 0.3); }
+        .comedy-badge { background: rgba(234, 179, 8, 0.15); color: var(--comedy-color); border: 1px solid rgba(234, 179, 8, 0.3); }
+        .thriller-badge { background: rgba(168, 85, 247, 0.15); color: var(--thriller-color); border: 1px solid rgba(168, 85, 247, 0.3); }
+
+        /* Output / Recommendation Section */
+        .results-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .movie-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .movie-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-gradient);
+            opacity: 0.7;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--card-hover-border);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.15);
+        }
+
+        .movie-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .movie-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .similarity-score {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .score-pct {
+            font-size: 1.35rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .score-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .movie-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        /* Progress Bar */
+        .progress-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--accent-gradient);
+            border-radius: 10px;
+            width: 0;
+            transition: width 1s ease-out;
+        }
+
+        /* Math Explanation Card */
+        .explanation-card {
+            background: rgba(16, 22, 37, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 1rem;
+        }
+
+        .explanation-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            color: #fff;
+        }
+
+        .explanation-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+
+        .math-block {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1.25rem;
+            border-radius: 12px;
+            border-left: 3px solid var(--accent-primary);
+            overflow-x: auto;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">CineMatch</div>
+        <p>Interactive Machine Learning Recommendation Engine Simulator</p>
+    </header>
+
+    <div class="container">
+        <!-- Input & Configuration Card -->
+        <div class="glass-card">
+            <div class="grid-inputs">
+                <!-- Search Movie Input -->
+                <div class="input-group">
+                    <label for="movie-search">Select Seed Movie</label>
+                    <div class="search-container">
+                        <input type="text" id="movie-search" class="custom-select" placeholder="Type to search movie (e.g. Interstellar, Summer in Paris...)" autocomplete="off">
+                        <div id="suggestions" class="suggestions-list"></div>
+                    </div>
+                </div>
+
+                <!-- Recommendation Strategy Selector -->
+                <div class="input-group">
+                    <label>Recommendation Strategy</label>
+                    <div class="toggle-container">
+                        <button class="toggle-btn active" id="btn-content" onclick="setStrategy('content_based')">Content-Based</button>
+                        <button class="toggle-btn" id="btn-collab" onclick="setStrategy('collaborative')">Collaborative</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seed Movie Info Details Box -->
+            <div class="selected-movie-box" id="seed-movie-box">
+                <div class="selected-header">
+                    <h3 id="seed-title" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem;">Loading seed movie...</h3>
+                    <span id="seed-genre" class="badge">Sci-Fi</span>
+                </div>
+                <p id="seed-description" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">Select a movie above to generate similar matches.</p>
+            </div>
+        </div>
+
+        <!-- Recommendations Grid -->
+        <div class="results-section">
+            <div class="section-title">
+                <span>Top Recommendations</span>
+                <span id="strategy-label" class="badge" style="background: var(--accent-gradient); color: #fff; font-size: 0.8rem; padding: 6px 12px;">Content-Based Model</span>
+            </div>
+
+            <div class="results-grid" id="recs-grid">
+                <!-- Javascript will insert card outputs here -->
+            </div>
+        </div>
+
+        <!-- How It Works Section (Math Details) -->
+        <div class="explanation-card">
+            <h3>How It Works</h3>
+            <div id="explanation-content">
+                <!-- Content will toggle depending on method chosen -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CineMatch Simulator &bull; Built with standard math, Cosine Similarity & TF-IDF</p>
+    </footer>
+
+    <script>
+        let moviesDB = {};
+        let currentMovieId = 1; // Default movie id to start with
+        let currentStrategy = 'content_based'; // content_based or collaborative
+
+        // Helper: get CSS badge class for genre
+        function getGenreBadgeClass(genre) {
+            switch(genre) {
+                case 'Sci-Fi': return 'scifi-badge';
+                case 'Action': return 'action-badge';
+                case 'Romance': return 'romance-badge';
+                case 'Comedy': return 'comedy-badge';
+                case 'Thriller': return 'thriller-badge';
+                default: return 'scifi-badge';
+            }
+        }
+
+        // Initialize App & Fetch Pre-computed recommendations database
+        async function init() {
+            try {
+                const response = await fetch('data/recommendations.json');
+                moviesDB = await response.json();
+                
+                // Populate Autocomplete search suggestions
+                setupSearch();
+
+                // Load initial movie recommendations
+                loadMovieRecommendations(currentMovieId);
+            } catch (error) {
+                console.error("Failed to load recommendations database", error);
+                document.getElementById('seed-title').textContent = "Error loading database";
+                document.getElementById('seed-description').textContent = "Make sure you ran the data generation and train.py calculations first.";
+            }
+        }
+
+        // Setup Search/Autocomplete functionality
+        function setupSearch() {
+            const searchInput = document.getElementById('movie-search');
+            const suggestionsDiv = document.getElementById('suggestions');
+
+            searchInput.addEventListener('input', () => {
+                const query = searchInput.value.toLowerCase().trim();
+                suggestionsDiv.innerHTML = '';
+                
+                if (query.length === 0) {
+                    suggestionsDiv.style.display = 'none';
+                    return;
+                }
+
+                const matches = Object.values(moviesDB).filter(m => 
+                    m.title.toLowerCase().includes(query) || 
+                    m.genre.toLowerCase().includes(query)
+                ).slice(0, 8); // cap suggestions to 8
+
+                if (matches.length === 0) {
+                    suggestionsDiv.style.display = 'none';
+                    return;
+                }
+
+                matches.forEach(movie => {
+                    const item = document.createElement('div');
+                    item.className = 'suggestion-item';
+                    
+                    const badgeClass = getGenreBadgeClass(movie.genre);
+                    item.innerHTML = `
+                        <span>${movie.title}</span>
+                        <span class="suggestion-genre badge ${badgeClass}">${movie.genre}</span>
+                    `;
+                    
+                    item.addEventListener('click', () => {
+                        currentMovieId = movie.id;
+                        searchInput.value = movie.title;
+                        suggestionsDiv.style.display = 'none';
+                        loadMovieRecommendations(movie.id);
+                    });
+                    
+                    suggestionsDiv.appendChild(item);
+                });
+
+                suggestionsDiv.style.display = 'block';
+            });
+
+            // Close suggestions when clicking outside
+            document.addEventListener('click', (e) => {
+                if (e.target !== searchInput) {
+                    suggestionsDiv.style.display = 'none';
+                }
+            });
+
+            // Focus opens all list as suggestion
+            searchInput.addEventListener('focus', () => {
+                if (searchInput.value === '') {
+                    // trigger standard list
+                    searchInput.dispatchEvent(new Event('input'));
+                }
+            });
+        }
+
+        // Set the recommendation strategy
+        function setStrategy(strategy) {
+            currentStrategy = strategy;
+            
+            const btnContent = document.getElementById('btn-content');
+            const btnCollab = document.getElementById('btn-collab');
+            const strategyLabel = document.getElementById('strategy-label');
+
+            if (strategy === 'content_based') {
+                btnContent.classList.add('active');
+                btnCollab.classList.remove('active');
+                strategyLabel.textContent = "Content-Based Model";
+            } else {
+                btnCollab.classList.add('active');
+                btnContent.classList.remove('active');
+                strategyLabel.textContent = "Collaborative Model";
+            }
+
+            loadMovieRecommendations(currentMovieId);
+        }
+
+        // Load specific movie info and populate recommendations grid
+        function loadMovieRecommendations(movieId) {
+            const movie = moviesDB[movieId.toString()];
+            if (!movie) return;
+
+            // Update Seed Movie details card
+            document.getElementById('seed-title').textContent = movie.title;
+            const seedGenreSpan = document.getElementById('seed-genre');
+            seedGenreSpan.textContent = movie.genre;
+            seedGenreSpan.className = `badge ${getGenreBadgeClass(movie.genre)}`;
+            document.getElementById('seed-description').textContent = movie.description;
+
+            // Get recommendations array based on strategy
+            const recs = movie[currentStrategy];
+            const grid = document.getElementById('recs-grid');
+            grid.innerHTML = '';
+
+            recs.forEach((rec, i) => {
+                const recMovieData = moviesDB[rec.id.toString()];
+                const desc = recMovieData ? recMovieData.description : "No description available.";
+                const badgeClass = getGenreBadgeClass(rec.genre);
+
+                const card = document.createElement('div');
+                card.className = 'movie-card';
+                card.innerHTML = `
+                    <div class="movie-card-header">
+                        <div>
+                            <div class="movie-title">${rec.title}</div>
+                            <span class="badge ${badgeClass}" style="margin-top: 0.25rem; display: inline-block;">${rec.genre}</span>
+                        </div>
+                        <div class="similarity-score">
+                            <span class="score-pct">${rec.score}%</span>
+                            <span class="score-label">Match</span>
+                        </div>
+                    </div>
+                    <div class="movie-desc">${desc}</div>
+                    <div class="progress-wrapper">
+                        <div class="progress-container">
+                            <div class="progress-bar" id="bar-${i}"></div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+
+                // Animate progress bar filling up
+                setTimeout(() => {
+                    const bar = document.getElementById(`bar-${i}`);
+                    if (bar) bar.style.width = `${rec.score}%`;
+                }, 100 + (i * 100)); // staggered animation
+            });
+
+            // Load Math Explanation dynamically
+            loadExplanation();
+        }
+
+        // Generate the mathematical explanations for the active model
+        function loadExplanation() {
+            const explanationContent = document.getElementById('explanation-content');
+            
+            if (currentStrategy === 'content_based') {
+                explanationContent.innerHTML = `
+                    <p class="explanation-text">
+                        <strong>Content-Based Filtering</strong> recommends movies similar to the selected movie based on textual metadata (genres and descriptions).
+                    </p>
+                    <div class="math-block">
+                        <h4>1. Vectorization (TF-IDF)</h4>
+                        <p class="explanation-text" style="margin-bottom: 0;">
+                            We transform text into numerical representations using <strong>Term Frequency-Inverse Document Frequency (TF-IDF)</strong>, giving weight to unique keywords and discounting common stop-words.
+                        </p>
+                    </div>
+                    <div class="math-block">
+                        <h4>2. Cosine Similarity Formula</h4>
+                        <p class="explanation-text">
+                            We calculate the similarity angle between the TF-IDF vectors of two movies \(A\) and \(B\):
+                        </p>
+                        \[Cosine(\theta) = \frac{\vec{A} \cdot \vec{B}}{\|\vec{A}\| \|\vec{B}\|} = \frac{\sum_{i=1}^{n} A_i B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \sqrt{\sum_{i=1}^{n} B_i^2}}\]
+                        <p class="explanation-text" style="margin-bottom: 0; font-size: 0.85rem; color: var(--text-muted);">
+                            If the vectors point in the exact same direction, the cosine is 1.0 (100% match). If they are perpendicular (no overlapping terms), the similarity is 0.0 (0% match).
+                        </p>
+                    </div>
+                `;
+            } else {
+                explanationContent.innerHTML = `
+                    <p class="explanation-text">
+                        <strong>Collaborative Filtering (Item-Item)</strong> calculates movie similarities based on how 200 synthetic users rated them.
+                    </p>
+                    <div class="math-block">
+                        <h4>1. User-Item Interaction Matrix</h4>
+                        <p class="explanation-text" style="margin-bottom: 0;">
+                            We construct an interaction matrix where rows are movies, columns are users, and elements are ratings (1-5). Unrated films are treated as 0. 
+                        </p>
+                    </div>
+                    <div class="math-block">
+                        <h4>2. Item-Item Cosine Similarity</h4>
+                        <p class="explanation-text">
+                            Instead of analyzing word occurrences, we analyze the rating vectors. If Movie \(A\) and Movie \(B\) receive very similar ratings from the same users, the cosine similarity of their rating vectors will be high:
+                        </p>
+                        \[Cosine\_Similarity(Movie_A, Movie_B) = \frac{\sum_{u \in U} R_{A,u} \cdot R_{B,u}}{\sqrt{\sum_{u \in U} R_{A,u}^2} \sqrt{\sum_{u \in U} R_{B,u}^2}}\]
+                        <p class="explanation-text" style="margin-bottom: 0; font-size: 0.85rem; color: var(--text-muted);">
+                            This captures human behavioral patterns (e.g. "Sci-Fi fans who rate Interstellar highly also rate Martian Horizon highly") even if the movie descriptions do not share similar words.
+                        </p>
+                    </div>
+                `;
+            }
+
+            // Trigger MathJax re-render if loaded
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

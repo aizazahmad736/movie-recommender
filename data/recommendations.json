@@ -1,0 +1,3502 @@
+{
+    "1": {
+        "id": 1,
+        "title": "Interstellar Journey",
+        "genre": "Sci-Fi",
+        "description": "An astronaut travels through a wormhole in space to find a new home for humanity, exploring time dilation and distant planets.",
+        "content_based": [
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 15.0
+            },
+            {
+                "id": 4,
+                "title": "Martian Horizon",
+                "genre": "Sci-Fi",
+                "score": 12.2
+            },
+            {
+                "id": 3,
+                "title": "The Quantum Paradox",
+                "genre": "Sci-Fi",
+                "score": 12.1
+            },
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 11.8
+            },
+            {
+                "id": 8,
+                "title": "Galaxy Alliance",
+                "genre": "Sci-Fi",
+                "score": 10.8
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 37.0
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 33.6
+            },
+            {
+                "id": 18,
+                "title": "Skyline Heist",
+                "genre": "Action",
+                "score": 33.1
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 32.3
+            },
+            {
+                "id": 3,
+                "title": "The Quantum Paradox",
+                "genre": "Sci-Fi",
+                "score": 32.3
+            }
+        ]
+    },
+    "2": {
+        "id": 2,
+        "title": "Cyber City 2099",
+        "genre": "Sci-Fi",
+        "description": "A neo-noir cyberpunk detective hunts down rogue artificial intelligence and replicants in a rain-slicked, neon-lit future metropolis.",
+        "content_based": [
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 6.0
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 5.8
+            },
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 5.6
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 5.6
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 5.5
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 39.6
+            },
+            {
+                "id": 6,
+                "title": "Artificial Soul",
+                "genre": "Sci-Fi",
+                "score": 33.7
+            },
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 32.9
+            },
+            {
+                "id": 29,
+                "title": "City Lights & Hearts",
+                "genre": "Romance",
+                "score": 32.0
+            },
+            {
+                "id": 30,
+                "title": "Love Notes",
+                "genre": "Romance",
+                "score": 31.8
+            }
+        ]
+    },
+    "3": {
+        "id": 3,
+        "title": "The Quantum Paradox",
+        "genre": "Sci-Fi",
+        "description": "A brilliant physicist accidentally triggers a time loop, forcing her to solve a reality-bending quantum mystery to save her timeline.",
+        "content_based": [
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 12.1
+            },
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 11.4
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 6.2
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 5.7
+            },
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 5.3
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 36.1
+            },
+            {
+                "id": 6,
+                "title": "Artificial Soul",
+                "genre": "Sci-Fi",
+                "score": 33.9
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 32.3
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 31.7
+            },
+            {
+                "id": 4,
+                "title": "Martian Horizon",
+                "genre": "Sci-Fi",
+                "score": 31.1
+            }
+        ]
+    },
+    "4": {
+        "id": 4,
+        "title": "Martian Horizon",
+        "genre": "Sci-Fi",
+        "description": "An astronaut is left stranded on a barren red planet and must use science, engineering, and sheer willpower to survive and contact Earth.",
+        "content_based": [
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 12.4
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 12.2
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 6.3
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 6.0
+            },
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 5.8
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 43.7
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 33.5
+            },
+            {
+                "id": 3,
+                "title": "The Quantum Paradox",
+                "genre": "Sci-Fi",
+                "score": 31.1
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 29.4
+            },
+            {
+                "id": 6,
+                "title": "Artificial Soul",
+                "genre": "Sci-Fi",
+                "score": 28.7
+            }
+        ]
+    },
+    "5": {
+        "id": 5,
+        "title": "Starlight Odyssey",
+        "genre": "Sci-Fi",
+        "description": "A spaceship crew encounters a mysterious alien artifact at the edge of the galaxy that challenges their perception of reality.",
+        "content_based": [
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 13.1
+            },
+            {
+                "id": 3,
+                "title": "The Quantum Paradox",
+                "genre": "Sci-Fi",
+                "score": 11.4
+            },
+            {
+                "id": 15,
+                "title": "Apex Predator",
+                "genre": "Action",
+                "score": 7.8
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 7.2
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 6.6
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 4,
+                "title": "Martian Horizon",
+                "genre": "Sci-Fi",
+                "score": 43.7
+            },
+            {
+                "id": 6,
+                "title": "Artificial Soul",
+                "genre": "Sci-Fi",
+                "score": 41.9
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 34.2
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 32.4
+            },
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 32.3
+            }
+        ]
+    },
+    "6": {
+        "id": 6,
+        "title": "Artificial Soul",
+        "genre": "Sci-Fi",
+        "description": "A tech CEO builds a highly advanced humanoid android, leading to a deep psychological battle over consciousness and human emotion.",
+        "content_based": [
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 12.9
+            },
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 11.9
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 6.8
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 6.5
+            },
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 6.1
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 41.9
+            },
+            {
+                "id": 3,
+                "title": "The Quantum Paradox",
+                "genre": "Sci-Fi",
+                "score": 33.9
+            },
+            {
+                "id": 2,
+                "title": "Cyber City 2099",
+                "genre": "Sci-Fi",
+                "score": 33.7
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 33.0
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 32.7
+            }
+        ]
+    },
+    "7": {
+        "id": 7,
+        "title": "Dark Matter",
+        "genre": "Sci-Fi",
+        "description": "Astronauts explore a derelict spaceship only to discover a terrifying energy source that distorts space, gravity, and human minds.",
+        "content_based": [
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 13.1
+            },
+            {
+                "id": 6,
+                "title": "Artificial Soul",
+                "genre": "Sci-Fi",
+                "score": 11.9
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 11.8
+            },
+            {
+                "id": 8,
+                "title": "Galaxy Alliance",
+                "genre": "Sci-Fi",
+                "score": 10.2
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 6.6
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 8,
+                "title": "Galaxy Alliance",
+                "genre": "Sci-Fi",
+                "score": 41.1
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 40.2
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 37.0
+            },
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 32.7
+            },
+            {
+                "id": 45,
+                "title": "Deep Water",
+                "genre": "Thriller",
+                "score": 31.3
+            }
+        ]
+    },
+    "8": {
+        "id": 8,
+        "title": "Galaxy Alliance",
+        "genre": "Sci-Fi",
+        "description": "A young pilot joins a rebel fleet to fight an oppressive galactic empire, engaging in epic space dogfights and interstellar battles.",
+        "content_based": [
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 11.8
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 10.8
+            },
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 10.2
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 6.1
+            },
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 5.6
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 41.1
+            },
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 31.3
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 30.3
+            },
+            {
+                "id": 12,
+                "title": "Shadow Agent",
+                "genre": "Action",
+                "score": 29.7
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 28.5
+            }
+        ]
+    },
+    "9": {
+        "id": 9,
+        "title": "Parallel Skies",
+        "genre": "Sci-Fi",
+        "description": "A scientist discovers a portal to a parallel universe where earth is ruled by advanced, benevolent technological beings.",
+        "content_based": [
+            {
+                "id": 6,
+                "title": "Artificial Soul",
+                "genre": "Sci-Fi",
+                "score": 12.9
+            },
+            {
+                "id": 4,
+                "title": "Martian Horizon",
+                "genre": "Sci-Fi",
+                "score": 12.4
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 7.1
+            },
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 6.6
+            },
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 6.6
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 42.0
+            },
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 40.2
+            },
+            {
+                "id": 16,
+                "title": "Midnight Run",
+                "genre": "Action",
+                "score": 39.0
+            },
+            {
+                "id": 4,
+                "title": "Martian Horizon",
+                "genre": "Sci-Fi",
+                "score": 33.5
+            },
+            {
+                "id": 45,
+                "title": "Deep Water",
+                "genre": "Thriller",
+                "score": 31.6
+            }
+        ]
+    },
+    "10": {
+        "id": 10,
+        "title": "The Machine Mind",
+        "genre": "Sci-Fi",
+        "description": "A supercomputer designed to govern a utopian city decides that humanity must be controlled for its own preservation.",
+        "content_based": [
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 15.0
+            },
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 7.2
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 7.1
+            },
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 6.6
+            },
+            {
+                "id": 6,
+                "title": "Artificial Soul",
+                "genre": "Sci-Fi",
+                "score": 6.5
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 42.0
+            },
+            {
+                "id": 3,
+                "title": "The Quantum Paradox",
+                "genre": "Sci-Fi",
+                "score": 36.1
+            },
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 34.2
+            },
+            {
+                "id": 16,
+                "title": "Midnight Run",
+                "genre": "Action",
+                "score": 33.7
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 33.5
+            }
+        ]
+    },
+    "11": {
+        "id": 11,
+        "title": "Speed Limit",
+        "genre": "Action",
+        "description": "A high-octane action thriller about a rogue cop chasing bank robbers through city streets in fast cars and explosive encounters.",
+        "content_based": [
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 13.8
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 11.1
+            },
+            {
+                "id": 44,
+                "title": "Double Identity",
+                "genre": "Thriller",
+                "score": 9.0
+            },
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 8.7
+            },
+            {
+                "id": 18,
+                "title": "Skyline Heist",
+                "genre": "Action",
+                "score": 8.6
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 18,
+                "title": "Skyline Heist",
+                "genre": "Action",
+                "score": 40.1
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 39.0
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 35.9
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 34.7
+            },
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 34.4
+            }
+        ]
+    },
+    "12": {
+        "id": 12,
+        "title": "Shadow Agent",
+        "genre": "Action",
+        "description": "An elite black-ops spy is betrayed by his agency and must go on the run, using close-quarters combat and stealth to uncover a conspiracy.",
+        "content_based": [
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 11.5
+            },
+            {
+                "id": 19,
+                "title": "Rogue Command",
+                "genre": "Action",
+                "score": 7.6
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 5.3
+            },
+            {
+                "id": 34,
+                "title": "Accidental Heroes",
+                "genre": "Comedy",
+                "score": 5.2
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 3.1
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 33.7
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 33.4
+            },
+            {
+                "id": 46,
+                "title": "The Perfect Crime",
+                "genre": "Thriller",
+                "score": 32.2
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 30.1
+            },
+            {
+                "id": 8,
+                "title": "Galaxy Alliance",
+                "genre": "Sci-Fi",
+                "score": 29.7
+            }
+        ]
+    },
+    "13": {
+        "id": 13,
+        "title": "The Last Gladiator",
+        "genre": "Action",
+        "description": "An epic historical action movie about a betrayed warrior fighting for survival and vengeance in brutal colosseum arena battles.",
+        "content_based": [
+            {
+                "id": 8,
+                "title": "Galaxy Alliance",
+                "genre": "Sci-Fi",
+                "score": 11.8
+            },
+            {
+                "id": 12,
+                "title": "Shadow Agent",
+                "genre": "Action",
+                "score": 11.5
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 11.1
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 6.5
+            },
+            {
+                "id": 34,
+                "title": "Accidental Heroes",
+                "genre": "Comedy",
+                "score": 6.4
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 38.3
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 37.7
+            },
+            {
+                "id": 33,
+                "title": "Superstore Chaos",
+                "genre": "Comedy",
+                "score": 37.0
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 35.6
+            },
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 32.0
+            }
+        ]
+    },
+    "14": {
+        "id": 14,
+        "title": "Underworld War",
+        "genre": "Action",
+        "description": "A vigilante wages a one-man war against a powerful crime syndicate, featuring stylized gunfights and martial arts choreography.",
+        "content_based": [
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 14.8
+            },
+            {
+                "id": 16,
+                "title": "Midnight Run",
+                "genre": "Action",
+                "score": 9.1
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 5.6
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 5.5
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 3.3
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 39.0
+            },
+            {
+                "id": 48,
+                "title": "Blind Spot",
+                "genre": "Thriller",
+                "score": 36.7
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 36.3
+            },
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 35.8
+            },
+            {
+                "id": 34,
+                "title": "Accidental Heroes",
+                "genre": "Comedy",
+                "score": 35.6
+            }
+        ]
+    },
+    "15": {
+        "id": 15,
+        "title": "Apex Predator",
+        "genre": "Action",
+        "description": "A group of mercenaries on a rescue mission in a dense tropical jungle find themselves hunted by a mysterious, stealthy beast.",
+        "content_based": [
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 13.2
+            },
+            {
+                "id": 45,
+                "title": "Deep Water",
+                "genre": "Thriller",
+                "score": 11.9
+            },
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 7.8
+            },
+            {
+                "id": 28,
+                "title": "Chasing Sunsets",
+                "genre": "Romance",
+                "score": 7.0
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 6.3
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 36.8
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 36.5
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 36.3
+            },
+            {
+                "id": 44,
+                "title": "Double Identity",
+                "genre": "Thriller",
+                "score": 35.0
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 34.0
+            }
+        ]
+    },
+    "16": {
+        "id": 16,
+        "title": "Midnight Run",
+        "genre": "Action",
+        "description": "A mercenary is hired to transport a high-value target across a war-torn urban wasteland while evading heavily armed gangs.",
+        "content_based": [
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 10.7
+            },
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 9.1
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 8.5
+            },
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 6.7
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 6.7
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 40.7
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 39.4
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 39.0
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 33.7
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 31.9
+            }
+        ]
+    },
+    "17": {
+        "id": 17,
+        "title": "Iron Fist",
+        "genre": "Action",
+        "description": "A martial arts expert returns home to avenge his master's death, entering a deadly underground tournament ruled by corrupt bosses.",
+        "content_based": [
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 14.8
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 10.1
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 6.6
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 5.3
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 5.3
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 19,
+                "title": "Rogue Command",
+                "genre": "Action",
+                "score": 41.2
+            },
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 41.1
+            },
+            {
+                "id": 44,
+                "title": "Double Identity",
+                "genre": "Thriller",
+                "score": 37.0
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 36.1
+            },
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 35.8
+            }
+        ]
+    },
+    "18": {
+        "id": 18,
+        "title": "Skyline Heist",
+        "genre": "Action",
+        "description": "A team of professional thieves plans a daring robbery of a high-security vault located on the top floor of a futuristic skyscraper.",
+        "content_based": [
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 8.6
+            },
+            {
+                "id": 46,
+                "title": "The Perfect Crime",
+                "genre": "Thriller",
+                "score": 8.3
+            },
+            {
+                "id": 16,
+                "title": "Midnight Run",
+                "genre": "Action",
+                "score": 5.8
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 5.7
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 3.3
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 40.1
+            },
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 34.7
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 33.1
+            },
+            {
+                "id": 45,
+                "title": "Deep Water",
+                "genre": "Thriller",
+                "score": 32.5
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 32.4
+            }
+        ]
+    },
+    "19": {
+        "id": 19,
+        "title": "Rogue Command",
+        "genre": "Action",
+        "description": "A squad of elite soldiers is sent behind enemy lines to dismantle a nuclear launch facility, encountering heavy military resistance.",
+        "content_based": [
+            {
+                "id": 12,
+                "title": "Shadow Agent",
+                "genre": "Action",
+                "score": 7.6
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 5.3
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 5.3
+            },
+            {
+                "id": 34,
+                "title": "Accidental Heroes",
+                "genre": "Comedy",
+                "score": 5.2
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 3.1
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 41.2
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 40.2
+            },
+            {
+                "id": 32,
+                "title": "The Big Mix-Up",
+                "genre": "Comedy",
+                "score": 36.7
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 35.1
+            },
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 33.9
+            }
+        ]
+    },
+    "20": {
+        "id": 20,
+        "title": "Urban Justice",
+        "genre": "Action",
+        "description": "A retired detective returns to the streets to clean up his neighborhood after his former partner is murdered by street gangs.",
+        "content_based": [
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 13.8
+            },
+            {
+                "id": 16,
+                "title": "Midnight Run",
+                "genre": "Action",
+                "score": 10.7
+            },
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 10.1
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 6.6
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 6.5
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 44,
+                "title": "Double Identity",
+                "genre": "Thriller",
+                "score": 40.2
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 37.0
+            },
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 36.3
+            },
+            {
+                "id": 15,
+                "title": "Apex Predator",
+                "genre": "Action",
+                "score": 36.3
+            },
+            {
+                "id": 48,
+                "title": "Blind Spot",
+                "genre": "Thriller",
+                "score": 35.9
+            }
+        ]
+    },
+    "21": {
+        "id": 21,
+        "title": "Summer in Paris",
+        "genre": "Romance",
+        "description": "A charming romantic drama about an American artist and a French writer meeting by chance and falling in love over one summer in Paris.",
+        "content_based": [
+            {
+                "id": 30,
+                "title": "Love Notes",
+                "genre": "Romance",
+                "score": 17.3
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 13.0
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 9.4
+            },
+            {
+                "id": 23,
+                "title": "Waves of Love",
+                "genre": "Romance",
+                "score": 7.4
+            },
+            {
+                "id": 28,
+                "title": "Chasing Sunsets",
+                "genre": "Romance",
+                "score": 7.2
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 40.3
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 36.7
+            },
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 35.0
+            },
+            {
+                "id": 29,
+                "title": "City Lights & Hearts",
+                "genre": "Romance",
+                "score": 34.2
+            },
+            {
+                "id": 36,
+                "title": "The Office Prankster",
+                "genre": "Comedy",
+                "score": 32.4
+            }
+        ]
+    },
+    "22": {
+        "id": 22,
+        "title": "Letters to You",
+        "genre": "Romance",
+        "description": "A heartwarming love story centered on two pen pals who exchange letters for decades, sharing life's triumphs and heartbreaks before finally meeting.",
+        "content_based": [
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 13.0
+            },
+            {
+                "id": 30,
+                "title": "Love Notes",
+                "genre": "Romance",
+                "score": 10.0
+            },
+            {
+                "id": 23,
+                "title": "Waves of Love",
+                "genre": "Romance",
+                "score": 6.7
+            },
+            {
+                "id": 28,
+                "title": "Chasing Sunsets",
+                "genre": "Romance",
+                "score": 6.5
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 5.8
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 42.4
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 40.7
+            },
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 37.2
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 36.7
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 36.4
+            }
+        ]
+    },
+    "23": {
+        "id": 23,
+        "title": "Waves of Love",
+        "genre": "Romance",
+        "description": "A small-town surfer falls in love with a visiting marine biologist, overcoming family expectations and contrasting lifestyles.",
+        "content_based": [
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 12.0
+            },
+            {
+                "id": 30,
+                "title": "Love Notes",
+                "genre": "Romance",
+                "score": 10.9
+            },
+            {
+                "id": 25,
+                "title": "Autumn Whispers",
+                "genre": "Romance",
+                "score": 9.3
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 7.4
+            },
+            {
+                "id": 28,
+                "title": "Chasing Sunsets",
+                "genre": "Romance",
+                "score": 7.1
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 30.3
+            },
+            {
+                "id": 19,
+                "title": "Rogue Command",
+                "genre": "Action",
+                "score": 30.1
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 30.1
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 29.9
+            },
+            {
+                "id": 45,
+                "title": "Deep Water",
+                "genre": "Thriller",
+                "score": 29.2
+            }
+        ]
+    },
+    "24": {
+        "id": 24,
+        "title": "Midnight Waltz",
+        "genre": "Romance",
+        "description": "An aspiring classical pianist and a passionate contemporary dancer find inspiration and romance in each other's artistic worlds.",
+        "content_based": [
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 19.0
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 6.4
+            },
+            {
+                "id": 23,
+                "title": "Waves of Love",
+                "genre": "Romance",
+                "score": 6.4
+            },
+            {
+                "id": 25,
+                "title": "Autumn Whispers",
+                "genre": "Romance",
+                "score": 6.2
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 6.2
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 41.1
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 40.7
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 37.5
+            },
+            {
+                "id": 30,
+                "title": "Love Notes",
+                "genre": "Romance",
+                "score": 37.3
+            },
+            {
+                "id": 25,
+                "title": "Autumn Whispers",
+                "genre": "Romance",
+                "score": 36.4
+            }
+        ]
+    },
+    "25": {
+        "id": 25,
+        "title": "Autumn Whispers",
+        "genre": "Romance",
+        "description": "Two former childhood sweethearts reunite at a wedding in a picturesque New England town, rekindling old feelings and unresolved conflicts.",
+        "content_based": [
+            {
+                "id": 23,
+                "title": "Waves of Love",
+                "genre": "Romance",
+                "score": 9.3
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 6.7
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 6.2
+            },
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 5.4
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 2.9
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 38.5
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 36.4
+            },
+            {
+                "id": 36,
+                "title": "The Office Prankster",
+                "genre": "Comedy",
+                "score": 33.9
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 32.0
+            },
+            {
+                "id": 30,
+                "title": "Love Notes",
+                "genre": "Romance",
+                "score": 31.1
+            }
+        ]
+    },
+    "26": {
+        "id": 26,
+        "title": "Stargazing",
+        "genre": "Romance",
+        "description": "A quirky astrophysicist and a free-spirited travel writer bond over a shared road trip to witness a rare meteor shower.",
+        "content_based": [
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 17.0
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 9.4
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 6.7
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 6.2
+            },
+            {
+                "id": 33,
+                "title": "Superstore Chaos",
+                "genre": "Comedy",
+                "score": 5.8
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 37.7
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 36.3
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 34.4
+            },
+            {
+                "id": 15,
+                "title": "Apex Predator",
+                "genre": "Action",
+                "score": 34.0
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 33.9
+            }
+        ]
+    },
+    "27": {
+        "id": 27,
+        "title": "The Chef's Recipe",
+        "genre": "Romance",
+        "description": "A high-strung gourmet chef and an easy-going food critic clash professionally but spark a passionate romance in the kitchen.",
+        "content_based": [
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 19.0
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 5.6
+            },
+            {
+                "id": 23,
+                "title": "Waves of Love",
+                "genre": "Romance",
+                "score": 5.5
+            },
+            {
+                "id": 25,
+                "title": "Autumn Whispers",
+                "genre": "Romance",
+                "score": 5.4
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 5.3
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 25,
+                "title": "Autumn Whispers",
+                "genre": "Romance",
+                "score": 38.5
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 37.2
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 35.0
+            },
+            {
+                "id": 36,
+                "title": "The Office Prankster",
+                "genre": "Comedy",
+                "score": 34.7
+            },
+            {
+                "id": 28,
+                "title": "Chasing Sunsets",
+                "genre": "Romance",
+                "score": 34.6
+            }
+        ]
+    },
+    "28": {
+        "id": 28,
+        "title": "Chasing Sunsets",
+        "genre": "Romance",
+        "description": "A documentary photographer and a local tour guide explore remote tropical islands, discovering love amidst breathtaking scenery.",
+        "content_based": [
+            {
+                "id": 30,
+                "title": "Love Notes",
+                "genre": "Romance",
+                "score": 10.5
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 7.2
+            },
+            {
+                "id": 23,
+                "title": "Waves of Love",
+                "genre": "Romance",
+                "score": 7.1
+            },
+            {
+                "id": 15,
+                "title": "Apex Predator",
+                "genre": "Action",
+                "score": 7.0
+            },
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 6.6
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 38.3
+            },
+            {
+                "id": 29,
+                "title": "City Lights & Hearts",
+                "genre": "Romance",
+                "score": 36.9
+            },
+            {
+                "id": 32,
+                "title": "The Big Mix-Up",
+                "genre": "Comedy",
+                "score": 35.0
+            },
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 34.6
+            },
+            {
+                "id": 33,
+                "title": "Superstore Chaos",
+                "genre": "Comedy",
+                "score": 33.9
+            }
+        ]
+    },
+    "29": {
+        "id": 29,
+        "title": "City Lights & Hearts",
+        "genre": "Romance",
+        "description": "Two busy professionals running away from their pasts cross paths in a bustling city coffee shop and discover unexpected affection.",
+        "content_based": [
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 6.2
+            },
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 6.2
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 6.0
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 5.8
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 5.2
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 41.6
+            },
+            {
+                "id": 28,
+                "title": "Chasing Sunsets",
+                "genre": "Romance",
+                "score": 36.9
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 34.7
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 34.2
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 33.0
+            }
+        ]
+    },
+    "30": {
+        "id": 30,
+        "title": "Love Notes",
+        "genre": "Romance",
+        "description": "A music teacher helping a widowed songwriter finish his album finds herself falling in love as they write beautiful love ballads together.",
+        "content_based": [
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 17.3
+            },
+            {
+                "id": 23,
+                "title": "Waves of Love",
+                "genre": "Romance",
+                "score": 10.9
+            },
+            {
+                "id": 28,
+                "title": "Chasing Sunsets",
+                "genre": "Romance",
+                "score": 10.5
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 10.0
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 5.9
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 42.3
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 37.3
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 33.9
+            },
+            {
+                "id": 2,
+                "title": "Cyber City 2099",
+                "genre": "Sci-Fi",
+                "score": 31.8
+            },
+            {
+                "id": 25,
+                "title": "Autumn Whispers",
+                "genre": "Romance",
+                "score": 31.1
+            }
+        ]
+    },
+    "31": {
+        "id": 31,
+        "title": "Grandma's Wild Ride",
+        "genre": "Comedy",
+        "description": "A hilarious comedy about a straight-laced accountant forced to take his eccentric, filter-free grandmother on a chaotic cross-country road trip.",
+        "content_based": [
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 17.0
+            },
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 11.7
+            },
+            {
+                "id": 34,
+                "title": "Accidental Heroes",
+                "genre": "Comedy",
+                "score": 10.4
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 10.2
+            },
+            {
+                "id": 33,
+                "title": "Superstore Chaos",
+                "genre": "Comedy",
+                "score": 9.7
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 36.8
+            },
+            {
+                "id": 34,
+                "title": "Accidental Heroes",
+                "genre": "Comedy",
+                "score": 36.1
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 34.4
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 33.9
+            },
+            {
+                "id": 36,
+                "title": "The Office Prankster",
+                "genre": "Comedy",
+                "score": 33.8
+            }
+        ]
+    },
+    "32": {
+        "id": 32,
+        "title": "The Big Mix-Up",
+        "genre": "Comedy",
+        "description": "Two identical twins\u2014one a high-profile corporate lawyer, the other a relaxed yoga instructor\u2014swap lives for a week with disastrous, funny results.",
+        "content_based": [
+            {
+                "id": 36,
+                "title": "The Office Prankster",
+                "genre": "Comedy",
+                "score": 14.0
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 10.5
+            },
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 6.4
+            },
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 5.7
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 5.1
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 19,
+                "title": "Rogue Command",
+                "genre": "Action",
+                "score": 36.7
+            },
+            {
+                "id": 28,
+                "title": "Chasing Sunsets",
+                "genre": "Romance",
+                "score": 35.0
+            },
+            {
+                "id": 37,
+                "title": "Virtual Reality Mishap",
+                "genre": "Comedy",
+                "score": 32.3
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 32.2
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 32.2
+            }
+        ]
+    },
+    "33": {
+        "id": 33,
+        "title": "Superstore Chaos",
+        "genre": "Comedy",
+        "description": "An ensemble workplace comedy focusing on the quirky, colorful, and downright bizarre employees working the night shift at a 24-hour hypermarket.",
+        "content_based": [
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 9.9
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 9.7
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 9.5
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 5.8
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 5.8
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 37.0
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 35.3
+            },
+            {
+                "id": 28,
+                "title": "Chasing Sunsets",
+                "genre": "Romance",
+                "score": 33.9
+            },
+            {
+                "id": 48,
+                "title": "Blind Spot",
+                "genre": "Thriller",
+                "score": 33.6
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 33.5
+            }
+        ]
+    },
+    "34": {
+        "id": 34,
+        "title": "Accidental Heroes",
+        "genre": "Comedy",
+        "description": "Three clueless friends on a camping trip stumble into a smuggler's camp and are mistaken for elite federal agents, leading to slapstick survival.",
+        "content_based": [
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 13.0
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 10.4
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 7.4
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 6.4
+            },
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 5.8
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 36.1
+            },
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 35.6
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 33.6
+            },
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 31.8
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 31.4
+            }
+        ]
+    },
+    "35": {
+        "id": 35,
+        "title": "Chef Disasters",
+        "genre": "Comedy",
+        "description": "A comedy about a clumsy amateur home cook who enters a prestigious reality TV cooking competition and somehow advances through pure luck.",
+        "content_based": [
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 10.2
+            },
+            {
+                "id": 33,
+                "title": "Superstore Chaos",
+                "genre": "Comedy",
+                "score": 9.9
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 9.9
+            },
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 5.8
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 5.6
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 42.4
+            },
+            {
+                "id": 16,
+                "title": "Midnight Run",
+                "genre": "Action",
+                "score": 39.4
+            },
+            {
+                "id": 45,
+                "title": "Deep Water",
+                "genre": "Thriller",
+                "score": 36.9
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 36.0
+            },
+            {
+                "id": 36,
+                "title": "The Office Prankster",
+                "genre": "Comedy",
+                "score": 34.0
+            }
+        ]
+    },
+    "36": {
+        "id": 36,
+        "title": "The Office Prankster",
+        "genre": "Comedy",
+        "description": "An office worker orchestrates increasingly elaborate and funny pranks on his grumpy boss, culminating in a corporate retreat disaster.",
+        "content_based": [
+            {
+                "id": 32,
+                "title": "The Big Mix-Up",
+                "genre": "Comedy",
+                "score": 14.0
+            },
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 6.7
+            },
+            {
+                "id": 48,
+                "title": "Blind Spot",
+                "genre": "Thriller",
+                "score": 6.0
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 5.4
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 5.3
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 34.7
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 34.3
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 34.0
+            },
+            {
+                "id": 25,
+                "title": "Autumn Whispers",
+                "genre": "Romance",
+                "score": 33.9
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 33.8
+            }
+        ]
+    },
+    "37": {
+        "id": 37,
+        "title": "Virtual Reality Mishap",
+        "genre": "Comedy",
+        "description": "A gamer gets stuck in a comical, bug-ridden simulation game where they must defeat a ridiculous villain to escape back to the real world.",
+        "content_based": [
+            {
+                "id": 46,
+                "title": "The Perfect Crime",
+                "genre": "Thriller",
+                "score": 5.3
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 5.1
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 5.0
+            },
+            {
+                "id": 33,
+                "title": "Superstore Chaos",
+                "genre": "Comedy",
+                "score": 4.9
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 4.9
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 40.7
+            },
+            {
+                "id": 44,
+                "title": "Double Identity",
+                "genre": "Thriller",
+                "score": 36.8
+            },
+            {
+                "id": 32,
+                "title": "The Big Mix-Up",
+                "genre": "Comedy",
+                "score": 32.3
+            },
+            {
+                "id": 48,
+                "title": "Blind Spot",
+                "genre": "Thriller",
+                "score": 31.4
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 31.0
+            }
+        ]
+    },
+    "38": {
+        "id": 38,
+        "title": "Wedding Crashers' Club",
+        "genre": "Comedy",
+        "description": "A group of friends make a bet to see who can crash the most high-society weddings in a single summer, leading to hilarious awkward encounters.",
+        "content_based": [
+            {
+                "id": 34,
+                "title": "Accidental Heroes",
+                "genre": "Comedy",
+                "score": 13.0
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 11.7
+            },
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 11.2
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 8.7
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 7.7
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 29,
+                "title": "City Lights & Hearts",
+                "genre": "Romance",
+                "score": 41.6
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 41.1
+            },
+            {
+                "id": 2,
+                "title": "Cyber City 2099",
+                "genre": "Sci-Fi",
+                "score": 32.9
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 32.9
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 32.7
+            }
+        ]
+    },
+    "39": {
+        "id": 39,
+        "title": "Stray Dog Shenanigans",
+        "genre": "Comedy",
+        "description": "A charming family comedy about a highly intelligent, mischievous stray dog who adopts a dysfunctional family and turns their lives upside down.",
+        "content_based": [
+            {
+                "id": 23,
+                "title": "Waves of Love",
+                "genre": "Romance",
+                "score": 12.0
+            },
+            {
+                "id": 32,
+                "title": "The Big Mix-Up",
+                "genre": "Comedy",
+                "score": 10.5
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 9.9
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 9.7
+            },
+            {
+                "id": 33,
+                "title": "Superstore Chaos",
+                "genre": "Comedy",
+                "score": 9.5
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 30,
+                "title": "Love Notes",
+                "genre": "Romance",
+                "score": 42.3
+            },
+            {
+                "id": 37,
+                "title": "Virtual Reality Mishap",
+                "genre": "Comedy",
+                "score": 40.7
+            },
+            {
+                "id": 46,
+                "title": "The Perfect Crime",
+                "genre": "Thriller",
+                "score": 38.2
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 37.5
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 37.0
+            }
+        ]
+    },
+    "40": {
+        "id": 40,
+        "title": "Pet Detectives",
+        "genre": "Comedy",
+        "description": "Two goofy pet detectives are hired to find a billionaire's missing championship parrot, leading them into a wacky criminal underworld.",
+        "content_based": [
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 7.7
+            },
+            {
+                "id": 34,
+                "title": "Accidental Heroes",
+                "genre": "Comedy",
+                "score": 7.4
+            },
+            {
+                "id": 16,
+                "title": "Midnight Run",
+                "genre": "Action",
+                "score": 6.7
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 5.6
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 5.5
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 40.3
+            },
+            {
+                "id": 19,
+                "title": "Rogue Command",
+                "genre": "Action",
+                "score": 40.2
+            },
+            {
+                "id": 28,
+                "title": "Chasing Sunsets",
+                "genre": "Romance",
+                "score": 38.3
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 37.7
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 36.0
+            }
+        ]
+    },
+    "41": {
+        "id": 41,
+        "title": "Silent Witness",
+        "genre": "Thriller",
+        "description": "A deaf woman must outsmart a home intruder in a secluded forest cabin, relying on her wits and heightened senses to survive the night.",
+        "content_based": [
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 9.3
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 6.0
+            },
+            {
+                "id": 4,
+                "title": "Martian Horizon",
+                "genre": "Sci-Fi",
+                "score": 6.0
+            },
+            {
+                "id": 33,
+                "title": "Superstore Chaos",
+                "genre": "Comedy",
+                "score": 5.8
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 5.0
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 41.1
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 39.0
+            },
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 39.0
+            },
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 38.9
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 37.7
+            }
+        ]
+    },
+    "42": {
+        "id": 42,
+        "title": "Fractured Minds",
+        "genre": "Thriller",
+        "description": "A psychological thriller about a detective investigating a murder, who begins to suspect that his own mind is playing tricks on him.",
+        "content_based": [
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 20.4
+            },
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 16.7
+            },
+            {
+                "id": 46,
+                "title": "The Perfect Crime",
+                "genre": "Thriller",
+                "score": 15.3
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 6.6
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 6.6
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 16,
+                "title": "Midnight Run",
+                "genre": "Action",
+                "score": 40.7
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 35.9
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 33.7
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 33.5
+            },
+            {
+                "id": 46,
+                "title": "The Perfect Crime",
+                "genre": "Thriller",
+                "score": 33.3
+            }
+        ]
+    },
+    "43": {
+        "id": 43,
+        "title": "The Cabin",
+        "genre": "Thriller",
+        "description": "A group of friends spend the weekend at a remote cabin in the woods, only to find themselves hunted by a masked figure playing psychological games.",
+        "content_based": [
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 20.4
+            },
+            {
+                "id": 15,
+                "title": "Apex Predator",
+                "genre": "Action",
+                "score": 13.2
+            },
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 11.2
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 9.3
+            },
+            {
+                "id": 45,
+                "title": "Deep Water",
+                "genre": "Thriller",
+                "score": 7.4
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 41.1
+            },
+            {
+                "id": 19,
+                "title": "Rogue Command",
+                "genre": "Action",
+                "score": 33.9
+            },
+            {
+                "id": 34,
+                "title": "Accidental Heroes",
+                "genre": "Comedy",
+                "score": 31.8
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 31.0
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 30.5
+            }
+        ]
+    },
+    "44": {
+        "id": 44,
+        "title": "Double Identity",
+        "genre": "Thriller",
+        "description": "A mild-mannered banker discovers he shares a name and bank account with a notorious international money launderer, putting a target on his back.",
+        "content_based": [
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 10.0
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 9.0
+            },
+            {
+                "id": 48,
+                "title": "Blind Spot",
+                "genre": "Thriller",
+                "score": 7.6
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 6.2
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 6.0
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 40.2
+            },
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 37.0
+            },
+            {
+                "id": 37,
+                "title": "Virtual Reality Mishap",
+                "genre": "Comedy",
+                "score": 36.8
+            },
+            {
+                "id": 15,
+                "title": "Apex Predator",
+                "genre": "Action",
+                "score": 35.0
+            },
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 33.8
+            }
+        ]
+    },
+    "45": {
+        "id": 45,
+        "title": "Deep Water",
+        "genre": "Thriller",
+        "description": "A marine researcher stranded on a sinking research platform must evade a group of hostile mercenaries looking to steal her deep-sea data.",
+        "content_based": [
+            {
+                "id": 15,
+                "title": "Apex Predator",
+                "genre": "Action",
+                "score": 11.9
+            },
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 7.4
+            },
+            {
+                "id": 23,
+                "title": "Waves of Love",
+                "genre": "Romance",
+                "score": 6.2
+            },
+            {
+                "id": 6,
+                "title": "Artificial Soul",
+                "genre": "Sci-Fi",
+                "score": 6.0
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 5.8
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 36.9
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 33.5
+            },
+            {
+                "id": 18,
+                "title": "Skyline Heist",
+                "genre": "Action",
+                "score": 32.5
+            },
+            {
+                "id": 46,
+                "title": "The Perfect Crime",
+                "genre": "Thriller",
+                "score": 32.4
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 31.6
+            }
+        ]
+    },
+    "46": {
+        "id": 46,
+        "title": "The Perfect Crime",
+        "genre": "Thriller",
+        "description": "An meticulous art thief plans his final heist, but a relentless detective matches him step-for-step in a high-stakes psychological game of chess.",
+        "content_based": [
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 15.3
+            },
+            {
+                "id": 18,
+                "title": "Skyline Heist",
+                "genre": "Action",
+                "score": 8.3
+            },
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 6.9
+            },
+            {
+                "id": 37,
+                "title": "Virtual Reality Mishap",
+                "genre": "Comedy",
+                "score": 5.3
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 5.3
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 38.2
+            },
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 35.9
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 33.6
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 33.3
+            },
+            {
+                "id": 36,
+                "title": "The Office Prankster",
+                "genre": "Comedy",
+                "score": 33.1
+            }
+        ]
+    },
+    "47": {
+        "id": 47,
+        "title": "Missing Link",
+        "genre": "Thriller",
+        "description": "A journalist investigating a corporate cover-up realizes that everyone she interviews is disappearing, making her the next target.",
+        "content_based": [
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 16.7
+            },
+            {
+                "id": 44,
+                "title": "Double Identity",
+                "genre": "Thriller",
+                "score": 10.0
+            },
+            {
+                "id": 36,
+                "title": "The Office Prankster",
+                "genre": "Comedy",
+                "score": 6.7
+            },
+            {
+                "id": 16,
+                "title": "Midnight Run",
+                "genre": "Action",
+                "score": 6.7
+            },
+            {
+                "id": 32,
+                "title": "The Big Mix-Up",
+                "genre": "Comedy",
+                "score": 6.4
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 49.7
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 38.9
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 38.3
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 34.4
+            },
+            {
+                "id": 19,
+                "title": "Rogue Command",
+                "genre": "Action",
+                "score": 32.9
+            }
+        ]
+    },
+    "48": {
+        "id": 48,
+        "title": "Blind Spot",
+        "genre": "Thriller",
+        "description": "A blind programmer discovers a hidden malicious code in an autonomous car software, leading to a high-speed chase to stop a citywide disaster.",
+        "content_based": [
+            {
+                "id": 44,
+                "title": "Double Identity",
+                "genre": "Thriller",
+                "score": 7.6
+            },
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 7.0
+            },
+            {
+                "id": 36,
+                "title": "The Office Prankster",
+                "genre": "Comedy",
+                "score": 6.0
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 5.7
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 5.6
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 36.7
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 35.9
+            },
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 33.8
+            },
+            {
+                "id": 33,
+                "title": "Superstore Chaos",
+                "genre": "Comedy",
+                "score": 33.6
+            },
+            {
+                "id": 44,
+                "title": "Double Identity",
+                "genre": "Thriller",
+                "score": 33.3
+            }
+        ]
+    },
+    "49": {
+        "id": 49,
+        "title": "The Safehouse",
+        "genre": "Thriller",
+        "description": "A government witness and a disgraced agent are trapped in a high-tech safehouse after its coordinates are leaked to assassin syndicates.",
+        "content_based": [
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 9.9
+            },
+            {
+                "id": 6,
+                "title": "Artificial Soul",
+                "genre": "Sci-Fi",
+                "score": 6.8
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 6.7
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 6.6
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 6.0
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 43.0
+            },
+            {
+                "id": 15,
+                "title": "Apex Predator",
+                "genre": "Action",
+                "score": 36.5
+            },
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 36.1
+            },
+            {
+                "id": 19,
+                "title": "Rogue Command",
+                "genre": "Action",
+                "score": 35.1
+            },
+            {
+                "id": 46,
+                "title": "The Perfect Crime",
+                "genre": "Thriller",
+                "score": 33.6
+            }
+        ]
+    },
+    "50": {
+        "id": 50,
+        "title": "Gridlock",
+        "genre": "Thriller",
+        "description": "A hostage negotiator is trapped in a massive traffic gridlock on a suspension bridge wired with explosives by an anonymous extortionist.",
+        "content_based": [
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 9.9
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 6.3
+            },
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 3.3
+            },
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 2.8
+            },
+            {
+                "id": 44,
+                "title": "Double Identity",
+                "genre": "Thriller",
+                "score": 2.7
+            }
+        ],
+        "collaborative": [
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 49.7
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 43.0
+            },
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 41.1
+            },
+            {
+                "id": 2,
+                "title": "Cyber City 2099",
+                "genre": "Sci-Fi",
+                "score": 39.6
+            },
+            {
+                "id": 46,
+                "title": "The Perfect Crime",
+                "genre": "Thriller",
+                "score": 35.9
+            }
+        ]
+    }
+}
