@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     
     <!-- LaTeX Math Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
@@ -406,6 +405,94 @@
             margin-bottom: 1rem;
         }
 
+        /* Rating Stars */
+        .stars {
+            display: flex;
+            gap: 0.25rem;
+        }
+        .star {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.15);
+            transition: color 0.15s ease, transform 0.1s ease;
+        }
+        .star:hover {
+            transform: scale(1.2);
+        }
+        .star.active {
+            color: #eab308;
+        }
+        
+        /* Tab buttons in results header */
+        .tabs-container {
+            display: flex;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 4px;
+            border-radius: 14px;
+        }
+        .tab-btn {
+            padding: 0.6rem 1.2rem;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .tab-btn:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.03);
+        }
+        .tab-btn.active {
+            background: var(--accent-gradient);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+        }
+        
+        /* Rated movies listing */
+        .rated-movie-chip {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            transition: all 0.2s;
+        }
+        .rated-movie-chip:hover {
+            background: rgba(239, 68, 68, 0.1);
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+        .rated-movie-chip .rating-stars-val {
+            color: #eab308;
+            font-weight: 700;
+        }
+        .delete-rate-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 1rem;
+            line-height: 1;
+            font-weight: 700;
+            padding: 0 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.1s;
+        }
+        .delete-rate-btn:hover {
+            color: var(--action-color);
+        }
+
         /* Footer */
         footer {
             margin-top: 4rem;
@@ -447,18 +534,46 @@
 
             <!-- Seed Movie Info Details Box -->
             <div class="selected-movie-box" id="seed-movie-box">
-                <div class="selected-header">
-                    <h3 id="seed-title" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem;">Loading seed movie...</h3>
-                    <span id="seed-genre" class="badge">Sci-Fi</span>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                    <div class="selected-header">
+                        <h3 id="seed-title" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem;">Loading seed movie...</h3>
+                        <span id="seed-genre" class="badge">Sci-Fi</span>
+                    </div>
+                    <!-- Stars Rating input -->
+                    <div class="rating-container" style="display: flex; align-items: center; gap: 0.6rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 6px 12px; border-radius: 12px;">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Your Rating:</span>
+                        <div class="stars" id="seed-rating-stars">
+                            <span class="star" data-value="1" onclick="submitRating(1)">&#9733;</span>
+                            <span class="star" data-value="2" onclick="submitRating(2)">&#9733;</span>
+                            <span class="star" data-value="3" onclick="submitRating(3)">&#9733;</span>
+                            <span class="star" data-value="4" onclick="submitRating(4)">&#9733;</span>
+                            <span class="star" data-value="5" onclick="submitRating(5)">&#9733;</span>
+                        </div>
+                        <button class="clear-btn" id="clear-seed-rating" onclick="removeRating()" style="display: none; background: transparent; border: none; color: var(--text-muted); cursor: pointer; font-size: 0.8rem; font-weight: 600; margin-left: 4px; transition: color 0.2s;">Remove</button>
+                    </div>
                 </div>
-                <p id="seed-description" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">Select a movie above to generate similar matches.</p>
+                <p id="seed-description" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5; margin-top: 0.5rem;">Select a movie above to generate similar matches.</p>
+                
+                <!-- Active User Ratings List -->
+                <div class="user-ratings-box" id="user-ratings-box" style="margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.06); display: none;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                        <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary);">Your Ratings History</h4>
+                        <button onclick="clearAllRatings()" style="background: transparent; border: none; color: var(--accent-secondary); cursor: pointer; font-size: 0.8rem; font-weight: 600;">Clear All</button>
+                    </div>
+                    <div id="rated-movies-list" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <!-- Rated movies will be added dynamically as small tag badges -->
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Recommendations Grid -->
         <div class="results-section">
             <div class="section-title">
-                <span>Top Recommendations</span>
+                <div class="tabs-container">
+                    <button class="tab-btn active" id="tab-seed" onclick="setMode('seed')">Similar to Movie</button>
+                    <button class="tab-btn" id="tab-personal" onclick="setMode('personal')">Personalized Feed</button>
+                </div>
                 <span id="strategy-label" class="badge" style="background: var(--accent-gradient); color: #fff; font-size: 0.8rem; padding: 6px 12px;">Content-Based Model</span>
             </div>
 
@@ -481,9 +596,13 @@
     </footer>
 
     <script>
-        let moviesDB = {};
-        let currentMovieId = 1; // Default movie id to start with
+        let moviesDB = {}; // Loaded from backend /api/movies
+        let userRatings = {}; // Session user ratings {"id": rating}
+        let currentMovieId = 1; // Active movie ID
         let currentStrategy = 'content_based'; // content_based or collaborative
+        let currentMode = 'seed'; // seed or personal
+        
+        const API_URL = "http://127.0.0.1:5000";
 
         // Helper: get CSS badge class for genre
         function getGenreBadgeClass(genre) {
@@ -497,21 +616,31 @@
             }
         }
 
-        // Initialize App & Fetch Pre-computed recommendations database
+        // Initialize App & Fetch complete movies list
         async function init() {
             try {
-                const response = await fetch('data/recommendations.json');
-                moviesDB = await response.json();
+                const response = await fetch(`${API_URL}/api/movies`);
+                if (!response.ok) throw new Error("Backend server not responding");
+                const moviesList = await response.json();
+                
+                // Map list to dictionary indexed by ID string
+                moviesDB = {};
+                moviesList.forEach(m => {
+                    moviesDB[m.id.toString()] = m;
+                });
                 
                 // Populate Autocomplete search suggestions
                 setupSearch();
 
-                // Load initial movie recommendations
-                loadMovieRecommendations(currentMovieId);
+                // Fetch recommendations for default movie
+                await fetchRecommendations();
             } catch (error) {
-                console.error("Failed to load recommendations database", error);
-                document.getElementById('seed-title').textContent = "Error loading database";
-                document.getElementById('seed-description').textContent = "Make sure you ran the data generation and train.py calculations first.";
+                console.error("Failed to load movies database", error);
+                document.getElementById('seed-title').textContent = "Error Connecting to API Backend";
+                document.getElementById('seed-description').innerHTML = 
+                    `Please ensure you have started the Python API server by running:<br>
+                    <code style="background: rgba(0,0,0,0.3); padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 8px; font-family: monospace;">python -m uvicorn app:app --port 5000</code>`;
+                document.getElementById('seed-genre').style.display = 'none';
             }
         }
 
@@ -549,11 +678,11 @@
                         <span class="suggestion-genre badge ${badgeClass}">${movie.genre}</span>
                     `;
                     
-                    item.addEventListener('click', () => {
+                    item.addEventListener('click', async () => {
                         currentMovieId = movie.id;
                         searchInput.value = movie.title;
                         suggestionsDiv.style.display = 'none';
-                        loadMovieRecommendations(movie.id);
+                        await fetchRecommendations();
                     });
                     
                     suggestionsDiv.appendChild(item);
@@ -569,17 +698,16 @@
                 }
             });
 
-            // Focus opens all list as suggestion
+            // Focus opens list
             searchInput.addEventListener('focus', () => {
                 if (searchInput.value === '') {
-                    // trigger standard list
                     searchInput.dispatchEvent(new Event('input'));
                 }
             });
         }
 
-        // Set the recommendation strategy
-        function setStrategy(strategy) {
+        // Set the recommendation strategy (Content-Based vs Collaborative)
+        async function setStrategy(strategy) {
             currentStrategy = strategy;
             
             const btnContent = document.getElementById('btn-content');
@@ -589,32 +717,101 @@
             if (strategy === 'content_based') {
                 btnContent.classList.add('active');
                 btnCollab.classList.remove('active');
-                strategyLabel.textContent = "Content-Based Model";
+                strategyLabel.textContent = currentMode === 'seed' ? "Content-Based Model" : "Personalized Content Model";
             } else {
                 btnCollab.classList.add('active');
                 btnContent.classList.remove('active');
-                strategyLabel.textContent = "Collaborative Model";
+                strategyLabel.textContent = currentMode === 'seed' ? "Collaborative Model" : "Personalized Collab Model";
             }
 
-            loadMovieRecommendations(currentMovieId);
+            await fetchRecommendations();
         }
 
-        // Load specific movie info and populate recommendations grid
-        function loadMovieRecommendations(movieId) {
-            const movie = moviesDB[movieId.toString()];
-            if (!movie) return;
+        // Set the recommendation mode (Similar to Seed vs Personalized Feed)
+        async function setMode(mode) {
+            currentMode = mode;
+            
+            const tabSeed = document.getElementById('tab-seed');
+            const tabPersonal = document.getElementById('tab-personal');
+            const strategyLabel = document.getElementById('strategy-label');
 
-            // Update Seed Movie details card
-            document.getElementById('seed-title').textContent = movie.title;
-            const seedGenreSpan = document.getElementById('seed-genre');
-            seedGenreSpan.textContent = movie.genre;
-            seedGenreSpan.className = `badge ${getGenreBadgeClass(movie.genre)}`;
-            document.getElementById('seed-description').textContent = movie.description;
+            if (mode === 'seed') {
+                tabSeed.classList.add('active');
+                tabPersonal.classList.remove('active');
+                strategyLabel.textContent = currentStrategy === 'content_based' ? "Content-Based Model" : "Collaborative Model";
+            } else {
+                tabPersonal.classList.add('active');
+                tabSeed.classList.remove('active');
+                strategyLabel.textContent = currentStrategy === 'content_based' ? "Personalized Content Model" : "Personalized Collab Model";
+                
+                // Alert if no ratings exist
+                if (Object.keys(userRatings).length === 0) {
+                    alert("You haven't rated any movies yet! We'll show default suggestions until you rate some films.");
+                }
+            }
 
-            // Get recommendations array based on strategy
-            const recs = movie[currentStrategy];
+            await fetchRecommendations();
+        }
+
+        // Fetch Recommendations from Python Backend API
+        async function fetchRecommendations() {
+            try {
+                const response = await fetch(`${API_URL}/api/recommend`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        seed_id: currentMovieId,
+                        user_ratings: userRatings
+                    })
+                });
+
+                if (!response.ok) throw new Error("Failed to load recommendations");
+                const data = await response.json();
+
+                // 1. Render active seed movie details
+                const seed = data.seed_movie;
+                document.getElementById('seed-title').textContent = seed.title;
+                const seedGenreSpan = document.getElementById('seed-genre');
+                seedGenreSpan.textContent = seed.genre;
+                seedGenreSpan.className = `badge ${getGenreBadgeClass(seed.genre)}`;
+                seedGenreSpan.style.display = 'inline-block';
+                document.getElementById('seed-description').textContent = seed.description;
+
+                // 2. Render star ratings for seed movie
+                const seedRating = userRatings[seed.id.toString()] || 0;
+                highlightStars(seedRating);
+
+                // 3. Render active ratings list
+                renderRatingsHistoryList();
+
+                // 4. Retrieve recommendations array based on currentMode and strategy
+                const recs = currentMode === 'seed' 
+                    ? data.seed_based[currentStrategy]
+                    : data.personalized[currentStrategy];
+                    
+                renderRecommendationsGrid(recs);
+                
+                // 5. Update math explanation
+                loadExplanation();
+            } catch (error) {
+                console.error("API error", error);
+            }
+        }
+
+        // Render recommendation items in the UI grid
+        function renderRecommendationsGrid(recs) {
             const grid = document.getElementById('recs-grid');
             grid.innerHTML = '';
+
+            if (!recs || recs.length === 0) {
+                grid.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary); padding: 2rem;">
+                        No recommendations found. Start rating movies to populate the feed!
+                    </div>`;
+                return;
+            }
 
             recs.forEach((rec, i) => {
                 const recMovieData = moviesDB[rec.id.toString()];
@@ -631,11 +828,19 @@
                         </div>
                         <div class="similarity-score">
                             <span class="score-pct">${rec.score}%</span>
-                            <span class="score-label">Match</span>
+                            <span class="score-label">${currentMode === 'seed' ? 'Match' : 'Match Score'}</span>
                         </div>
                     </div>
                     <div class="movie-desc">${desc}</div>
-                    <div class="progress-wrapper">
+                    <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                        <button onclick="selectMovieAsSeed(${rec.id})" style="background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.2); padding: 0.4rem 0.8rem; border-radius: 8px; font-family: inherit; font-size: 0.8rem; color: #fff; cursor: pointer; transition: all 0.2s;">
+                            Select as Seed
+                        </button>
+                        <div class="stars" style="font-size: 1rem; color: #eab308;">
+                            ${getMiniStarsHTML(rec.id)}
+                        </div>
+                    </div>
+                    <div class="progress-wrapper" style="margin-top: 0.75rem;">
                         <div class="progress-container">
                             <div class="progress-bar" id="bar-${i}"></div>
                         </div>
@@ -649,59 +854,199 @@
                     if (bar) bar.style.width = `${rec.score}%`;
                 }, 100 + (i * 100)); // staggered animation
             });
-
-            // Load Math Explanation dynamically
-            loadExplanation();
         }
 
-        // Generate the mathematical explanations for the active model
+        // Helper: get HTML stars string for recommended movie if already rated
+        function getMiniStarsHTML(movieId) {
+            const rating = userRatings[movieId.toString()];
+            if (!rating) return "";
+            return "&#9733;".repeat(rating);
+        }
+
+        // Helper to select a recommended movie as the active seed
+        function selectMovieAsSeed(movieId) {
+            currentMovieId = movieId;
+            const searchInput = document.getElementById('movie-search');
+            if (moviesDB[movieId.toString()]) {
+                searchInput.value = moviesDB[movieId.toString()].title;
+            }
+            fetchRecommendations();
+        }
+
+        // Helper to set rating highlights on stars in the active movie card
+        function highlightStars(rating) {
+            const stars = document.querySelectorAll('#seed-rating-stars .star');
+            stars.forEach(star => {
+                const val = parseInt(star.getAttribute('data-value'));
+                if (val <= rating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+            document.getElementById('clear-seed-rating').style.display = rating > 0 ? 'inline-block' : 'none';
+        }
+
+        // Action when user clicks a star rating
+        async function submitRating(val) {
+            userRatings[currentMovieId.toString()] = val;
+            highlightStars(val);
+            await fetchRecommendations();
+        }
+
+        // Action when user clears rating for seed movie
+        async function removeRating() {
+            delete userRatings[currentMovieId.toString()];
+            highlightStars(0);
+            await fetchRecommendations();
+        }
+
+        // Action to remove a rating from history panel
+        async function deleteRatingFromHistory(movieId) {
+            delete userRatings[movieId.toString()];
+            await fetchRecommendations();
+        }
+
+        // Action to clear all ratings
+        async function clearAllRatings() {
+            if (confirm("Are you sure you want to clear all your ratings?")) {
+                userRatings = {};
+                await fetchRecommendations();
+            }
+        }
+
+        // Render User Ratings History chips
+        function renderRatingsHistoryList() {
+            const container = document.getElementById('user-ratings-box');
+            const listDiv = document.getElementById('rated-movies-list');
+            listDiv.innerHTML = '';
+            
+            const ratedKeys = Object.keys(userRatings);
+            
+            if (ratedKeys.length === 0) {
+                container.style.display = 'none';
+                return;
+            }
+            
+            container.style.display = 'block';
+            
+            // Sort by title
+            const sortedIds = ratedKeys.map(Number).sort((a, b) => {
+                const titleA = moviesDB[a.toString()].title.toLowerCase();
+                const titleB = moviesDB[b.toString()].title.toLowerCase();
+                return titleA.localeCompare(titleB);
+            });
+            
+            sortedIds.forEach(mId => {
+                const movie = moviesDB[mId.toString()];
+                if (!movie) return;
+                
+                const chip = document.createElement('div');
+                chip.className = 'rated-movie-chip';
+                chip.innerHTML = `
+                    <span>${movie.title}</span>
+                    <span class="rating-stars-val">${userRatings[mId.toString()]} ★</span>
+                    <button class="delete-rate-btn" onclick="deleteRatingFromHistory(${mId})">&times;</button>
+                `;
+                listDiv.appendChild(chip);
+            });
+        }
+
+        // Generate the mathematical explanations for the active model and mode
         function loadExplanation() {
             const explanationContent = document.getElementById('explanation-content');
             
             if (currentStrategy === 'content_based') {
-                explanationContent.innerHTML = `
-                    <p class="explanation-text">
-                        <strong>Content-Based Filtering</strong> recommends movies similar to the selected movie based on textual metadata (genres and descriptions).
-                    </p>
-                    <div class="math-block">
-                        <h4>1. Vectorization (TF-IDF)</h4>
-                        <p class="explanation-text" style="margin-bottom: 0;">
-                            We transform text into numerical representations using <strong>Term Frequency-Inverse Document Frequency (TF-IDF)</strong>, giving weight to unique keywords and discounting common stop-words.
-                        </p>
-                    </div>
-                    <div class="math-block">
-                        <h4>2. Cosine Similarity Formula</h4>
+                if (currentMode === 'seed') {
+                    explanationContent.innerHTML = `
                         <p class="explanation-text">
-                            We calculate the similarity angle between the TF-IDF vectors of two movies \(A\) and \(B\):
+                            <strong>Content-Based Filtering (Single Movie)</strong> recommends movies similar to the selected movie based on textual metadata (genres and descriptions).
                         </p>
-                        \[Cosine(\theta) = \frac{\vec{A} \cdot \vec{B}}{\|\vec{A}\| \|\vec{B}\|} = \frac{\sum_{i=1}^{n} A_i B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \sqrt{\sum_{i=1}^{n} B_i^2}}\]
-                        <p class="explanation-text" style="margin-bottom: 0; font-size: 0.85rem; color: var(--text-muted);">
-                            If the vectors point in the exact same direction, the cosine is 1.0 (100% match). If they are perpendicular (no overlapping terms), the similarity is 0.0 (0% match).
+                        <div class="math-block">
+                            <h4>1. Vectorization (TF-IDF)</h4>
+                            <p class="explanation-text" style="margin-bottom: 0;">
+                                We transform text into numerical representations using <strong>Term Frequency-Inverse Document Frequency (TF-IDF)</strong>, giving weight to unique keywords and discounting common stop-words.
+                            </p>
+                        </div>
+                        <div class="math-block">
+                            <h4>2. Cosine Similarity Formula</h4>
+                            <p class="explanation-text">
+                                We calculate the similarity angle between the TF-IDF vectors of the seed movie \(A\) and candidates \(B\):
+                            </p>
+                            \[Cosine\_Similarity(\vec{A}, \vec{B}) = \frac{\vec{A} \cdot \vec{B}}{\|\vec{A}\| \|\vec{B}\|} = \frac{\sum_{i=1}^{n} A_i B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \sqrt{\sum_{i=1}^{n} B_i^2}}\]
+                            <p class="explanation-text" style="margin-bottom: 0; font-size: 0.85rem; color: var(--text-muted);">
+                                If the vectors point in the exact same direction, the cosine is 1.0 (100% match). If they are perpendicular (no overlapping terms), the similarity is 0.0 (0% match).
+                            </p>
+                        </div>
+                    `;
+                } else {
+                    explanationContent.innerHTML = `
+                        <p class="explanation-text">
+                            <strong>Personalized Content-Based Filtering</strong> constructs a single combined preference vector based on all your ratings, then matches it against all movies.
                         </p>
-                    </div>
-                `;
+                        <div class="math-block">
+                            <h4>1. Weighted User Profile Vector</h4>
+                            <p class="explanation-text">
+                                We calculate a User Profile Vector \(\vec{U}\) as the weighted sum of TF-IDF vectors of all rated movies \(\vec{M}_j\). Ratings are centered around 3.0 so that 4-5 star ratings pull the profile *towards* a genre/theme, while 1-2 star ratings push the profile *away* from it:
+                            </p>
+                            \[\vec{U}_{profile} = \sum_{j \in \text{rated}} (R_{u, j} - 3.0) \cdot \vec{M}_j\]
+                        </div>
+                        <div class="math-block">
+                            <h4>2. Cosine Similarity Matching</h4>
+                            <p class="explanation-text">
+                                We match the user's overall profile vector \(\vec{U}_{profile}\) against all candidate movies \(\vec{M}_i\):
+                            </p>
+                            \[Match\_Score(Movie_i) = Cosine\_Similarity(\vec{U}_{profile}, \vec{M}_i) = \frac{\vec{U}_{profile} \cdot \vec{M}_i}{\|\vec{U}_{profile}\| \|\vec{M}_i\|}\]
+                        </div>
+                    `;
+                }
             } else {
-                explanationContent.innerHTML = `
-                    <p class="explanation-text">
-                        <strong>Collaborative Filtering (Item-Item)</strong> calculates movie similarities based on how 200 synthetic users rated them.
-                    </p>
-                    <div class="math-block">
-                        <h4>1. User-Item Interaction Matrix</h4>
-                        <p class="explanation-text" style="margin-bottom: 0;">
-                            We construct an interaction matrix where rows are movies, columns are users, and elements are ratings (1-5). Unrated films are treated as 0. 
-                        </p>
-                    </div>
-                    <div class="math-block">
-                        <h4>2. Item-Item Cosine Similarity</h4>
+                if (currentMode === 'seed') {
+                    explanationContent.innerHTML = `
                         <p class="explanation-text">
-                            Instead of analyzing word occurrences, we analyze the rating vectors. If Movie \(A\) and Movie \(B\) receive very similar ratings from the same users, the cosine similarity of their rating vectors will be high:
+                            <strong>Collaborative Filtering (Item-Item)</strong> calculates movie similarities based on how 200 synthetic users rated them.
                         </p>
-                        \[Cosine\_Similarity(Movie_A, Movie_B) = \frac{\sum_{u \in U} R_{A,u} \cdot R_{B,u}}{\sqrt{\sum_{u \in U} R_{A,u}^2} \sqrt{\sum_{u \in U} R_{B,u}^2}}\]
-                        <p class="explanation-text" style="margin-bottom: 0; font-size: 0.85rem; color: var(--text-muted);">
-                            This captures human behavioral patterns (e.g. "Sci-Fi fans who rate Interstellar highly also rate Martian Horizon highly") even if the movie descriptions do not share similar words.
+                        <div class="math-block">
+                            <h4>1. User-Item Interaction Matrix</h4>
+                            <p class="explanation-text" style="margin-bottom: 0;">
+                                We construct an interaction matrix where rows are movies, columns are users, and elements are ratings (1-5). Unrated films are treated as 0. 
+                            </p>
+                        </div>
+                        <div class="math-block">
+                            <h4>2. Item-Item Cosine Similarity</h4>
+                            <p class="explanation-text">
+                                Instead of analyzing word occurrences, we analyze the rating vectors. If Movie \(A\) and Movie \(B\) receive very similar ratings from the same users, the cosine similarity of their rating vectors will be high:
+                            </p>
+                            \[Cosine\_Similarity(Movie_A, Movie_B) = \frac{\sum_{u \in U} R_{A,u} \cdot R_{B,u}}{\sqrt{\sum_{u \in U} R_{A,u}^2} \sqrt{\sum_{u \in U} R_{B,u}^2}}\]
+                            <p class="explanation-text" style="margin-bottom: 0; font-size: 0.85rem; color: var(--text-muted);">
+                                This captures human behavioral patterns (e.g. "Sci-Fi fans who rate Interstellar highly also rate Martian Horizon highly") even if the movie descriptions do not share similar words.
+                            </p>
+                        </div>
+                    `;
+                } else {
+                    explanationContent.innerHTML = `
+                        <p class="explanation-text">
+                            <strong>Personalized Collaborative Filtering (Item-Item)</strong> predicts what rating you would give to unrated movies, using your rated movies as anchors.
                         </p>
-                    </div>
-                `;
+                        <div class="math-block">
+                            <h4>1. Rating Prediction Formula</h4>
+                            <p class="explanation-text">
+                                The predicted rating \(\hat{R}_{u, i}\) for user \(u\) on an unrated movie \(i\) is a weighted average of the user's ratings on similar movies \(j\), where the weight is the item similarity \(\text{Sim}(i, j)\):
+                            </p>
+                            \[\hat{R}_{u, i} = \frac{\sum_{j \in \text{rated}} \text{Sim}(i, j) \cdot R_{u, j}}{\sum_{j \in \text{rated}} |\text{Sim}(i, j)|}\]
+                            <p class="explanation-text" style="margin-bottom: 0; font-size: 0.85rem; color: var(--text-muted);">
+                                We only consider rated movies \(j\) that have a positive similarity to the candidate movie \(i\) (\(\text{Sim}(i, j) > 0\)).
+                            </p>
+                        </div>
+                        <div class="math-block">
+                            <h4>2. Match Percentage Normalization</h4>
+                            <p class="explanation-text">
+                                To show this predicted rating as a percentage score, we map the scale of 1.0 - 5.0 to a 0% - 100% match score:
+                            </p>
+                            \[Match\_Score = \frac{\hat{R}_{u, i} - 1}{4} \times 100\%\]
+                        </div>
+                    `;
+                }
             }
 
             // Trigger MathJax re-render if loaded
