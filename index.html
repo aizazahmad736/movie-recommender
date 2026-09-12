@@ -814,6 +814,7 @@
             }
 
             recs.forEach((rec, i) => {
+                const isTopPick = i === 0;
                 const recMovieData = moviesDB[rec.id.toString()];
                 const desc = recMovieData ? recMovieData.description : "No description available.";
                 const badgeClass = getGenreBadgeClass(rec.genre);
