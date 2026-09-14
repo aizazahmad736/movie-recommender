@@ -1,0 +1,29 @@
+name: CineMatch Project Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check project files
+        run: |
+          test -f index.html
+          test -f README.md
+
+      - name: Validate HTML
+        run: |
+          grep -q "<!DOCTYPE html>" index.html
+          grep -q "<html" index.html
+          grep -q "</html>" index.html
+
+      - name: Project check successful
+        run: echo "CineMatch project checks passed successfully!"
