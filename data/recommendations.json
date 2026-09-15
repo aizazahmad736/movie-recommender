@@ -67,6 +67,38 @@
                 "genre": "Sci-Fi",
                 "score": 32.3
             }
+        ],
+        "hybrid": [
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 24.4
+            },
+            {
+                "id": 3,
+                "title": "The Quantum Paradox",
+                "genre": "Sci-Fi",
+                "score": 22.2
+            },
+            {
+                "id": 8,
+                "title": "Galaxy Alliance",
+                "genre": "Sci-Fi",
+                "score": 19.7
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 18.9
+            },
+            {
+                "id": 6,
+                "title": "Artificial Soul",
+                "genre": "Sci-Fi",
+                "score": 18.5
+            }
         ]
     },
     "2": {
@@ -136,6 +168,38 @@
                 "title": "Love Notes",
                 "genre": "Romance",
                 "score": 31.8
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 19.8
+            },
+            {
+                "id": 6,
+                "title": "Artificial Soul",
+                "genre": "Sci-Fi",
+                "score": 19.4
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 18.5
+            },
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 18.0
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 16.9
             }
         ]
     },
@@ -207,6 +271,38 @@
                 "genre": "Sci-Fi",
                 "score": 31.1
             }
+        ],
+        "hybrid": [
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 22.2
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 21.2
+            },
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 19.7
+            },
+            {
+                "id": 6,
+                "title": "Artificial Soul",
+                "genre": "Sci-Fi",
+                "score": 19.6
+            },
+            {
+                "id": 4,
+                "title": "Martian Horizon",
+                "genre": "Sci-Fi",
+                "score": 18.1
+            }
         ]
     },
     "4": {
@@ -276,6 +372,38 @@
                 "title": "Artificial Soul",
                 "genre": "Sci-Fi",
                 "score": 28.7
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 24.8
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 23.0
+            },
+            {
+                "id": 3,
+                "title": "The Quantum Paradox",
+                "genre": "Sci-Fi",
+                "score": 18.1
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 17.2
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 17.0
             }
         ]
     },
@@ -347,6 +475,38 @@
                 "genre": "Thriller",
                 "score": 32.3
             }
+        ],
+        "hybrid": [
+            {
+                "id": 4,
+                "title": "Martian Horizon",
+                "genre": "Sci-Fi",
+                "score": 24.8
+            },
+            {
+                "id": 6,
+                "title": "Artificial Soul",
+                "genre": "Sci-Fi",
+                "score": 24.0
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 20.7
+            },
+            {
+                "id": 3,
+                "title": "The Quantum Paradox",
+                "genre": "Sci-Fi",
+                "score": 19.7
+            },
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 19.1
+            }
         ]
     },
     "6": {
@@ -416,6 +576,38 @@
                 "title": "Grandma's Wild Ride",
                 "genre": "Comedy",
                 "score": 32.7
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 24.0
+            },
+            {
+                "id": 3,
+                "title": "The Quantum Paradox",
+                "genre": "Sci-Fi",
+                "score": 19.6
+            },
+            {
+                "id": 2,
+                "title": "Cyber City 2099",
+                "genre": "Sci-Fi",
+                "score": 19.4
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 18.7
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 18.5
             }
         ]
     },
@@ -487,6 +679,38 @@
                 "genre": "Thriller",
                 "score": 31.3
             }
+        ],
+        "hybrid": [
+            {
+                "id": 8,
+                "title": "Galaxy Alliance",
+                "genre": "Sci-Fi",
+                "score": 25.7
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 24.4
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 23.1
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 18.7
+            },
+            {
+                "id": 2,
+                "title": "Cyber City 2099",
+                "genre": "Sci-Fi",
+                "score": 18.0
+            }
         ]
     },
     "8": {
@@ -556,6 +780,38 @@
                 "title": "Interstellar Journey",
                 "genre": "Sci-Fi",
                 "score": 28.5
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 25.7
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 19.7
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 17.9
+            },
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 15.6
+            },
+            {
+                "id": 3,
+                "title": "The Quantum Paradox",
+                "genre": "Sci-Fi",
+                "score": 15.0
             }
         ]
     },
@@ -627,6 +883,38 @@
                 "genre": "Thriller",
                 "score": 31.6
             }
+        ],
+        "hybrid": [
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 24.6
+            },
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 23.1
+            },
+            {
+                "id": 4,
+                "title": "Martian Horizon",
+                "genre": "Sci-Fi",
+                "score": 23.0
+            },
+            {
+                "id": 16,
+                "title": "Midnight Run",
+                "genre": "Action",
+                "score": 19.5
+            },
+            {
+                "id": 1,
+                "title": "Interstellar Journey",
+                "genre": "Sci-Fi",
+                "score": 18.9
+            }
         ]
     },
     "10": {
@@ -696,6 +984,38 @@
                 "title": "Fractured Minds",
                 "genre": "Thriller",
                 "score": 33.5
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 24.6
+            },
+            {
+                "id": 3,
+                "title": "The Quantum Paradox",
+                "genre": "Sci-Fi",
+                "score": 21.2
+            },
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 20.7
+            },
+            {
+                "id": 7,
+                "title": "Dark Matter",
+                "genre": "Sci-Fi",
+                "score": 18.7
+            },
+            {
+                "id": 29,
+                "title": "City Lights & Hearts",
+                "genre": "Romance",
+                "score": 18.5
             }
         ]
     },
@@ -767,6 +1087,38 @@
                 "genre": "Thriller",
                 "score": 34.4
             }
+        ],
+        "hybrid": [
+            {
+                "id": 18,
+                "title": "Skyline Heist",
+                "genre": "Action",
+                "score": 24.3
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 22.1
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 21.0
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 20.8
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 20.5
+            }
         ]
     },
     "12": {
@@ -836,6 +1188,38 @@
                 "title": "Galaxy Alliance",
                 "genre": "Sci-Fi",
                 "score": 29.7
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 18.2
+            },
+            {
+                "id": 19,
+                "title": "Rogue Command",
+                "genre": "Action",
+                "score": 17.0
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 16.7
+            },
+            {
+                "id": 46,
+                "title": "The Perfect Crime",
+                "genre": "Thriller",
+                "score": 16.1
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 15.9
             }
         ]
     },
@@ -907,6 +1291,38 @@
                 "genre": "Action",
                 "score": 32.0
             }
+        ],
+        "hybrid": [
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 20.5
+            },
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 19.1
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 19.0
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 18.9
+            },
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 18.8
+            }
         ]
     },
     "14": {
@@ -976,6 +1392,38 @@
                 "title": "Accidental Heroes",
                 "genre": "Comedy",
                 "score": 35.6
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 25.3
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 19.8
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 19.5
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 18.9
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 18.8
             }
         ]
     },
@@ -1047,6 +1495,38 @@
                 "genre": "Romance",
                 "score": 34.0
             }
+        ],
+        "hybrid": [
+            {
+                "id": 45,
+                "title": "Deep Water",
+                "genre": "Thriller",
+                "score": 20.2
+            },
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 20.0
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 20.0
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 18.4
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 18.2
+            }
         ]
     },
     "16": {
@@ -1116,6 +1596,38 @@
                 "title": "Grandma's Wild Ride",
                 "genre": "Comedy",
                 "score": 31.9
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 20.4
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 19.7
+            },
+            {
+                "id": 9,
+                "title": "Parallel Skies",
+                "genre": "Sci-Fi",
+                "score": 19.5
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 19.3
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 16.8
             }
         ]
     },
@@ -1187,6 +1699,38 @@
                 "genre": "Action",
                 "score": 35.8
             }
+        ],
+        "hybrid": [
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 25.3
+            },
+            {
+                "id": 19,
+                "title": "Rogue Command",
+                "genre": "Action",
+                "score": 21.9
+            },
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 20.6
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 20.0
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 19.1
+            }
         ]
     },
     "18": {
@@ -1256,6 +1800,38 @@
                 "title": "Stray Dog Shenanigans",
                 "genre": "Comedy",
                 "score": 32.4
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 24.3
+            },
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 18.7
+            },
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 17.5
+            },
+            {
+                "id": 46,
+                "title": "The Perfect Crime",
+                "genre": "Thriller",
+                "score": 17.4
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 17.3
             }
         ]
     },
@@ -1327,6 +1903,38 @@
                 "genre": "Thriller",
                 "score": 33.9
             }
+        ],
+        "hybrid": [
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 21.9
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 20.1
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 18.8
+            },
+            {
+                "id": 32,
+                "title": "The Big Mix-Up",
+                "genre": "Comedy",
+                "score": 18.4
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 18.3
+            }
         ]
     },
     "20": {
@@ -1396,6 +2004,38 @@
                 "title": "Blind Spot",
                 "genre": "Thriller",
                 "score": 35.9
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 22.1
+            },
+            {
+                "id": 44,
+                "title": "Double Identity",
+                "genre": "Thriller",
+                "score": 20.1
+            },
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 20.0
+            },
+            {
+                "id": 15,
+                "title": "Apex Predator",
+                "genre": "Action",
+                "score": 20.0
+            },
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 19.8
             }
         ]
     },
@@ -1467,6 +2107,38 @@
                 "genre": "Comedy",
                 "score": 32.4
             }
+        ],
+        "hybrid": [
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 24.8
+            },
+            {
+                "id": 30,
+                "title": "Love Notes",
+                "genre": "Romance",
+                "score": 21.8
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 20.8
+            },
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 20.3
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 20.1
+            }
         ]
     },
     "22": {
@@ -1536,6 +2208,38 @@
                 "title": "Stray Dog Shenanigans",
                 "genre": "Comedy",
                 "score": 36.4
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 24.8
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 23.3
+            },
+            {
+                "id": 30,
+                "title": "Love Notes",
+                "genre": "Romance",
+                "score": 22.0
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 21.2
+            },
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 21.1
             }
         ]
     },
@@ -1607,6 +2311,38 @@
                 "genre": "Thriller",
                 "score": 29.2
             }
+        ],
+        "hybrid": [
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 18.8
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 18.8
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 18.3
+            },
+            {
+                "id": 30,
+                "title": "Love Notes",
+                "genre": "Romance",
+                "score": 18.0
+            },
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 17.9
+            }
         ]
     },
     "24": {
@@ -1676,6 +2412,38 @@
                 "title": "Autumn Whispers",
                 "genre": "Romance",
                 "score": 36.4
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 23.9
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 23.3
+            },
+            {
+                "id": 30,
+                "title": "Love Notes",
+                "genre": "Romance",
+                "score": 21.6
+            },
+            {
+                "id": 25,
+                "title": "Autumn Whispers",
+                "genre": "Romance",
+                "score": 21.3
+            },
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 20.6
             }
         ]
     },
@@ -1747,6 +2515,38 @@
                 "genre": "Romance",
                 "score": 31.1
             }
+        ],
+        "hybrid": [
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 21.9
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 21.3
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 17.4
+            },
+            {
+                "id": 36,
+                "title": "The Office Prankster",
+                "genre": "Comedy",
+                "score": 16.9
+            },
+            {
+                "id": 30,
+                "title": "Love Notes",
+                "genre": "Romance",
+                "score": 16.8
+            }
         ]
     },
     "26": {
@@ -1816,6 +2616,38 @@
                 "title": "Grandma's Wild Ride",
                 "genre": "Comedy",
                 "score": 33.9
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 25.4
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 20.8
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 20.3
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 18.8
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 18.2
             }
         ]
     },
@@ -1887,6 +2719,38 @@
                 "genre": "Romance",
                 "score": 34.6
             }
+        ],
+        "hybrid": [
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 23.9
+            },
+            {
+                "id": 25,
+                "title": "Autumn Whispers",
+                "genre": "Romance",
+                "score": 21.9
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 21.1
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 20.3
+            },
+            {
+                "id": 28,
+                "title": "Chasing Sunsets",
+                "genre": "Romance",
+                "score": 20.0
+            }
         ]
     },
     "28": {
@@ -1956,6 +2820,38 @@
                 "title": "Superstore Chaos",
                 "genre": "Comedy",
                 "score": 33.9
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 20.0
+            },
+            {
+                "id": 29,
+                "title": "City Lights & Hearts",
+                "genre": "Romance",
+                "score": 19.8
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 19.7
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 19.2
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 18.8
             }
         ]
     },
@@ -2027,6 +2923,38 @@
                 "genre": "Romance",
                 "score": 33.0
             }
+        ],
+        "hybrid": [
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 20.8
+            },
+            {
+                "id": 28,
+                "title": "Chasing Sunsets",
+                "genre": "Romance",
+                "score": 19.8
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 18.8
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 18.5
+            },
+            {
+                "id": 10,
+                "title": "The Machine Mind",
+                "genre": "Sci-Fi",
+                "score": 18.5
+            }
         ]
     },
     "30": {
@@ -2096,6 +3024,38 @@
                 "title": "Autumn Whispers",
                 "genre": "Romance",
                 "score": 31.1
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 22.0
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 21.8
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 21.6
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 21.1
+            },
+            {
+                "id": 23,
+                "title": "Waves of Love",
+                "genre": "Romance",
+                "score": 18.0
             }
         ]
     },
@@ -2167,6 +3127,38 @@
                 "genre": "Comedy",
                 "score": 33.8
             }
+        ],
+        "hybrid": [
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 25.4
+            },
+            {
+                "id": 34,
+                "title": "Accidental Heroes",
+                "genre": "Comedy",
+                "score": 23.3
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 23.2
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 20.0
+            },
+            {
+                "id": 36,
+                "title": "The Office Prankster",
+                "genre": "Comedy",
+                "score": 19.5
+            }
         ]
     },
     "32": {
@@ -2236,6 +3228,38 @@
                 "title": "Speed Limit",
                 "genre": "Action",
                 "score": 32.2
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 19.9
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 18.6
+            },
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 18.4
+            },
+            {
+                "id": 19,
+                "title": "Rogue Command",
+                "genre": "Action",
+                "score": 18.4
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 17.5
             }
         ]
     },
@@ -2307,6 +3331,38 @@
                 "genre": "Comedy",
                 "score": 33.5
             }
+        ],
+        "hybrid": [
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 21.5
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 18.5
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 18.4
+            },
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 17.6
+            },
+            {
+                "id": 26,
+                "title": "Stargazing",
+                "genre": "Romance",
+                "score": 17.3
+            }
         ]
     },
     "34": {
@@ -2376,6 +3432,38 @@
                 "title": "The Safehouse",
                 "genre": "Thriller",
                 "score": 31.4
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 23.3
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 19.3
+            },
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 19.3
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 19.3
+            },
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 18.8
             }
         ]
     },
@@ -2447,6 +3535,38 @@
                 "genre": "Comedy",
                 "score": 34.0
             }
+        ],
+        "hybrid": [
+            {
+                "id": 22,
+                "title": "Letters to You",
+                "genre": "Romance",
+                "score": 21.2
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 20.8
+            },
+            {
+                "id": 16,
+                "title": "Midnight Run",
+                "genre": "Action",
+                "score": 19.7
+            },
+            {
+                "id": 36,
+                "title": "The Office Prankster",
+                "genre": "Comedy",
+                "score": 19.7
+            },
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 19.1
+            }
         ]
     },
     "36": {
@@ -2516,6 +3636,38 @@
                 "title": "Grandma's Wild Ride",
                 "genre": "Comedy",
                 "score": 33.8
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 19.7
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 19.5
+            },
+            {
+                "id": 48,
+                "title": "Blind Spot",
+                "genre": "Thriller",
+                "score": 19.1
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 18.6
+            },
+            {
+                "id": 27,
+                "title": "The Chef's Recipe",
+                "genre": "Romance",
+                "score": 17.3
             }
         ]
     },
@@ -2587,6 +3739,38 @@
                 "genre": "Romance",
                 "score": 31.0
             }
+        ],
+        "hybrid": [
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 22.8
+            },
+            {
+                "id": 44,
+                "title": "Double Identity",
+                "genre": "Thriller",
+                "score": 18.4
+            },
+            {
+                "id": 32,
+                "title": "The Big Mix-Up",
+                "genre": "Comedy",
+                "score": 17.4
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 16.7
+            },
+            {
+                "id": 48,
+                "title": "Blind Spot",
+                "genre": "Thriller",
+                "score": 15.7
+            }
         ]
     },
     "38": {
@@ -2656,6 +3840,38 @@
                 "title": "Stray Dog Shenanigans",
                 "genre": "Comedy",
                 "score": 32.7
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 29,
+                "title": "City Lights & Hearts",
+                "genre": "Romance",
+                "score": 20.8
+            },
+            {
+                "id": 24,
+                "title": "Midnight Waltz",
+                "genre": "Romance",
+                "score": 20.6
+            },
+            {
+                "id": 34,
+                "title": "Accidental Heroes",
+                "genre": "Comedy",
+                "score": 19.3
+            },
+            {
+                "id": 5,
+                "title": "Starlight Odyssey",
+                "genre": "Sci-Fi",
+                "score": 19.1
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 19.0
             }
         ]
     },
@@ -2727,6 +3943,38 @@
                 "genre": "Action",
                 "score": 37.0
             }
+        ],
+        "hybrid": [
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 23.2
+            },
+            {
+                "id": 37,
+                "title": "Virtual Reality Mishap",
+                "genre": "Comedy",
+                "score": 22.8
+            },
+            {
+                "id": 33,
+                "title": "Superstore Chaos",
+                "genre": "Comedy",
+                "score": 21.5
+            },
+            {
+                "id": 30,
+                "title": "Love Notes",
+                "genre": "Romance",
+                "score": 21.1
+            },
+            {
+                "id": 32,
+                "title": "The Big Mix-Up",
+                "genre": "Comedy",
+                "score": 19.9
+            }
         ]
     },
     "40": {
@@ -2796,6 +4044,38 @@
                 "title": "Chef Disasters",
                 "genre": "Comedy",
                 "score": 36.0
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 20.8
+            },
+            {
+                "id": 21,
+                "title": "Summer in Paris",
+                "genre": "Romance",
+                "score": 20.1
+            },
+            {
+                "id": 19,
+                "title": "Rogue Command",
+                "genre": "Action",
+                "score": 20.1
+            },
+            {
+                "id": 31,
+                "title": "Grandma's Wild Ride",
+                "genre": "Comedy",
+                "score": 20.0
+            },
+            {
+                "id": 34,
+                "title": "Accidental Heroes",
+                "genre": "Comedy",
+                "score": 19.3
             }
         ]
     },
@@ -2867,6 +4147,38 @@
                 "genre": "Action",
                 "score": 37.7
             }
+        ],
+        "hybrid": [
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 25.2
+            },
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 21.0
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 20.8
+            },
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 19.5
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 18.9
+            }
         ]
     },
     "42": {
@@ -2936,6 +4248,38 @@
                 "title": "The Perfect Crime",
                 "genre": "Thriller",
                 "score": 33.3
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 46,
+                "title": "The Perfect Crime",
+                "genre": "Thriller",
+                "score": 24.3
+            },
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 24.2
+            },
+            {
+                "id": 43,
+                "title": "The Cabin",
+                "genre": "Thriller",
+                "score": 21.5
+            },
+            {
+                "id": 11,
+                "title": "Speed Limit",
+                "genre": "Action",
+                "score": 21.0
+            },
+            {
+                "id": 16,
+                "title": "Midnight Run",
+                "genre": "Action",
+                "score": 20.4
             }
         ]
     },
@@ -3007,6 +4351,38 @@
                 "genre": "Thriller",
                 "score": 30.5
             }
+        ],
+        "hybrid": [
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 25.2
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 21.5
+            },
+            {
+                "id": 15,
+                "title": "Apex Predator",
+                "genre": "Action",
+                "score": 20.0
+            },
+            {
+                "id": 34,
+                "title": "Accidental Heroes",
+                "genre": "Comedy",
+                "score": 18.8
+            },
+            {
+                "id": 38,
+                "title": "Wedding Crashers' Club",
+                "genre": "Comedy",
+                "score": 17.1
+            }
         ]
     },
     "44": {
@@ -3076,6 +4452,38 @@
                 "title": "Gridlock",
                 "genre": "Thriller",
                 "score": 33.8
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 48,
+                "title": "Blind Spot",
+                "genre": "Thriller",
+                "score": 20.5
+            },
+            {
+                "id": 20,
+                "title": "Urban Justice",
+                "genre": "Action",
+                "score": 20.1
+            },
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 19.4
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 18.6
+            },
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 18.5
             }
         ]
     },
@@ -3147,6 +4555,38 @@
                 "genre": "Sci-Fi",
                 "score": 31.6
             }
+        ],
+        "hybrid": [
+            {
+                "id": 15,
+                "title": "Apex Predator",
+                "genre": "Action",
+                "score": 20.2
+            },
+            {
+                "id": 35,
+                "title": "Chef Disasters",
+                "genre": "Comedy",
+                "score": 18.5
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 17.9
+            },
+            {
+                "id": 23,
+                "title": "Waves of Love",
+                "genre": "Romance",
+                "score": 17.7
+            },
+            {
+                "id": 6,
+                "title": "Artificial Soul",
+                "genre": "Sci-Fi",
+                "score": 17.6
+            }
         ]
     },
     "46": {
@@ -3216,6 +4656,38 @@
                 "title": "The Office Prankster",
                 "genre": "Comedy",
                 "score": 33.1
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 24.3
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 19.4
+            },
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 19.1
+            },
+            {
+                "id": 39,
+                "title": "Stray Dog Shenanigans",
+                "genre": "Comedy",
+                "score": 19.1
+            },
+            {
+                "id": 18,
+                "title": "Skyline Heist",
+                "genre": "Action",
+                "score": 17.4
             }
         ]
     },
@@ -3287,6 +4759,38 @@
                 "genre": "Action",
                 "score": 32.9
             }
+        ],
+        "hybrid": [
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 26.5
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 24.2
+            },
+            {
+                "id": 41,
+                "title": "Silent Witness",
+                "genre": "Thriller",
+                "score": 21.0
+            },
+            {
+                "id": 44,
+                "title": "Double Identity",
+                "genre": "Thriller",
+                "score": 19.4
+            },
+            {
+                "id": 13,
+                "title": "The Last Gladiator",
+                "genre": "Action",
+                "score": 19.1
+            }
         ]
     },
     "48": {
@@ -3356,6 +4860,38 @@
                 "title": "Double Identity",
                 "genre": "Thriller",
                 "score": 33.3
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 44,
+                "title": "Double Identity",
+                "genre": "Thriller",
+                "score": 20.5
+            },
+            {
+                "id": 36,
+                "title": "The Office Prankster",
+                "genre": "Comedy",
+                "score": 19.1
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 18.4
+            },
+            {
+                "id": 14,
+                "title": "Underworld War",
+                "genre": "Action",
+                "score": 18.4
+            },
+            {
+                "id": 40,
+                "title": "Pet Detectives",
+                "genre": "Comedy",
+                "score": 18.2
             }
         ]
     },
@@ -3427,6 +4963,38 @@
                 "genre": "Thriller",
                 "score": 33.6
             }
+        ],
+        "hybrid": [
+            {
+                "id": 50,
+                "title": "Gridlock",
+                "genre": "Thriller",
+                "score": 26.4
+            },
+            {
+                "id": 46,
+                "title": "The Perfect Crime",
+                "genre": "Thriller",
+                "score": 19.4
+            },
+            {
+                "id": 42,
+                "title": "Fractured Minds",
+                "genre": "Thriller",
+                "score": 19.3
+            },
+            {
+                "id": 15,
+                "title": "Apex Predator",
+                "genre": "Action",
+                "score": 18.2
+            },
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 18.0
+            }
         ]
     },
     "50": {
@@ -3496,6 +5064,38 @@
                 "title": "The Perfect Crime",
                 "genre": "Thriller",
                 "score": 35.9
+            }
+        ],
+        "hybrid": [
+            {
+                "id": 47,
+                "title": "Missing Link",
+                "genre": "Thriller",
+                "score": 26.5
+            },
+            {
+                "id": 49,
+                "title": "The Safehouse",
+                "genre": "Thriller",
+                "score": 26.4
+            },
+            {
+                "id": 17,
+                "title": "Iron Fist",
+                "genre": "Action",
+                "score": 20.6
+            },
+            {
+                "id": 2,
+                "title": "Cyber City 2099",
+                "genre": "Sci-Fi",
+                "score": 19.8
+            },
+            {
+                "id": 46,
+                "title": "The Perfect Crime",
+                "genre": "Thriller",
+                "score": 19.1
             }
         ]
     }
