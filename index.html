@@ -308,6 +308,26 @@
             box-shadow: 0 10px 25px rgba(99, 102, 241, 0.15);
         }
 
+        .movie-card.top-pick {
+            border-color: rgba(99, 102, 241, 0.45);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .top-pick-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            background: linear-gradient(135deg, #f59e0b 0%, #ec4899 100%);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 3px 9px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(245, 158, 11, 0.35);
+        }
+
         .movie-card-header {
             display: flex;
             justify-content: space-between;
@@ -422,6 +442,25 @@
         .star.active {
             color: #eab308;
         }
+
+        .card-stars {
+            display: inline-flex;
+            gap: 2px;
+        }
+        .card-star {
+            font-size: 1.1rem;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.2);
+            transition: color 0.15s ease, transform 0.1s ease;
+            user-select: none;
+        }
+        .card-star:hover {
+            transform: scale(1.2);
+            color: #facc15;
+        }
+        .card-star.active {
+            color: #eab308;
+        }
         
         /* Tab buttons in results header */
         .tabs-container {
@@ -528,6 +567,7 @@
                     <div class="toggle-container">
                         <button class="toggle-btn active" id="btn-content" onclick="setStrategy('content_based')">Content-Based</button>
                         <button class="toggle-btn" id="btn-collab" onclick="setStrategy('collaborative')">Collaborative</button>
+                        <button class="toggle-btn" id="btn-hybrid" onclick="setStrategy('hybrid')">⚡ Hybrid</button>
                     </div>
                 </div>
             </div>
@@ -602,7 +642,9 @@
         let currentStrategy = 'content_based'; // content_based or collaborative
         let currentMode = 'seed'; // seed or personal
         
-        const API_URL = "http://127.0.0.1:5000";
+        const API_URL = (window.location.protocol.startsWith('http')) 
+            ? window.location.origin 
+            : "http://127.0.0.1:5000";
 
         // Helper: get CSS badge class for genre
         function getGenreBadgeClass(genre) {
@@ -639,7 +681,7 @@
                 document.getElementById('seed-title').textContent = "Error Connecting to API Backend";
                 document.getElementById('seed-description').innerHTML = 
                     `Please ensure you have started the Python API server by running:<br>
-                    <code style="background: rgba(0,0,0,0.3); padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 8px; font-family: monospace;">python -m uvicorn app:app --port 5000</code>`;
+                    <code style="background: rgba(0,0,0,0.3); padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 8px; font-family: monospace;">python app.py</code> (or <code>python -m uvicorn app:app --port 5000</code>)`;
                 document.getElementById('seed-genre').style.display = 'none';
             }
         }
@@ -706,22 +748,25 @@
             });
         }
 
-        // Set the recommendation strategy (Content-Based vs Collaborative)
+        // Set the recommendation strategy (Content-Based vs Collaborative vs Hybrid)
         async function setStrategy(strategy) {
             currentStrategy = strategy;
             
             const btnContent = document.getElementById('btn-content');
             const btnCollab = document.getElementById('btn-collab');
+            const btnHybrid = document.getElementById('btn-hybrid');
             const strategyLabel = document.getElementById('strategy-label');
 
+            btnContent.classList.toggle('active', strategy === 'content_based');
+            btnCollab.classList.toggle('active', strategy === 'collaborative');
+            btnHybrid.classList.toggle('active', strategy === 'hybrid');
+
             if (strategy === 'content_based') {
-                btnContent.classList.add('active');
-                btnCollab.classList.remove('active');
                 strategyLabel.textContent = currentMode === 'seed' ? "Content-Based Model" : "Personalized Content Model";
-            } else {
-                btnCollab.classList.add('active');
-                btnContent.classList.remove('active');
+            } else if (strategy === 'collaborative') {
                 strategyLabel.textContent = currentMode === 'seed' ? "Collaborative Model" : "Personalized Collab Model";
+            } else {
+                strategyLabel.textContent = currentMode === 'seed' ? "Hybrid Ensemble Model" : "Personalized Hybrid Model";
             }
 
             await fetchRecommendations();
@@ -738,11 +783,23 @@
             if (mode === 'seed') {
                 tabSeed.classList.add('active');
                 tabPersonal.classList.remove('active');
-                strategyLabel.textContent = currentStrategy === 'content_based' ? "Content-Based Model" : "Collaborative Model";
+                if (currentStrategy === 'content_based') {
+                    strategyLabel.textContent = "Content-Based Model";
+                } else if (currentStrategy === 'collaborative') {
+                    strategyLabel.textContent = "Collaborative Model";
+                } else {
+                    strategyLabel.textContent = "Hybrid Ensemble Model";
+                }
             } else {
                 tabPersonal.classList.add('active');
                 tabSeed.classList.remove('active');
-                strategyLabel.textContent = currentStrategy === 'content_based' ? "Personalized Content Model" : "Personalized Collab Model";
+                if (currentStrategy === 'content_based') {
+                    strategyLabel.textContent = "Personalized Content Model";
+                } else if (currentStrategy === 'collaborative') {
+                    strategyLabel.textContent = "Personalized Collab Model";
+                } else {
+                    strategyLabel.textContent = "Personalized Hybrid Model";
+                }
                 
                 // Alert if no ratings exist
                 if (Object.keys(userRatings).length === 0) {
@@ -820,12 +877,15 @@
                 const badgeClass = getGenreBadgeClass(rec.genre);
 
                 const card = document.createElement('div');
-                card.className = 'movie-card';
+                card.className = isTopPick ? 'movie-card top-pick' : 'movie-card';
                 card.innerHTML = `
                     <div class="movie-card-header">
                         <div>
-                            <div class="movie-title">${rec.title}</div>
-                            <span class="badge ${badgeClass}" style="margin-top: 0.25rem; display: inline-block;">${rec.genre}</span>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <div class="movie-title">${rec.title}</div>
+                                ${isTopPick ? `<span class="top-pick-badge">⭐ Top Match</span>` : ''}
+                            </div>
+                            <span class="badge ${badgeClass}" style="margin-top: 0.35rem; display: inline-block;">${rec.genre}</span>
                         </div>
                         <div class="similarity-score">
                             <span class="score-pct">${rec.score}%</span>
@@ -833,12 +893,15 @@
                         </div>
                     </div>
                     <div class="movie-desc">${desc}</div>
-                    <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
                         <button onclick="selectMovieAsSeed(${rec.id})" style="background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.2); padding: 0.4rem 0.8rem; border-radius: 8px; font-family: inherit; font-size: 0.8rem; color: #fff; cursor: pointer; transition: all 0.2s;">
                             Select as Seed
                         </button>
-                        <div class="stars" style="font-size: 1rem; color: #eab308;">
-                            ${getMiniStarsHTML(rec.id)}
+                        <div style="display: flex; align-items: center; gap: 0.4rem;">
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">Rate:</span>
+                            <div class="card-stars">
+                                ${renderCardStarButtons(rec.id)}
+                            </div>
                         </div>
                     </div>
                     <div class="progress-wrapper" style="margin-top: 0.75rem;">
@@ -857,11 +920,28 @@
             });
         }
 
-        // Helper: get HTML stars string for recommended movie if already rated
-        function getMiniStarsHTML(movieId) {
-            const rating = userRatings[movieId.toString()];
-            if (!rating) return "";
-            return "&#9733;".repeat(rating);
+        // Helper: render interactive star rating buttons for recommendation cards
+        function renderCardStarButtons(movieId) {
+            const currentRating = userRatings[movieId.toString()] || 0;
+            let starsHtml = '';
+            for (let val = 1; val <= 5; val++) {
+                const activeClass = val <= currentRating ? ' active' : '';
+                starsHtml += `<span class="card-star${activeClass}" onclick="submitMovieRating(${movieId}, ${val})" title="Rate ${val} star${val > 1 ? 's' : ''}">&#9733;</span>`;
+            }
+            return starsHtml;
+        }
+
+        // Direct rating handler on recommendation cards
+        async function submitMovieRating(movieId, val) {
+            if (userRatings[movieId.toString()] === val) {
+                delete userRatings[movieId.toString()];
+            } else {
+                userRatings[movieId.toString()] = val;
+            }
+            if (movieId === currentMovieId) {
+                highlightStars(userRatings[movieId.toString()] || 0);
+            }
+            await fetchRecommendations();
         }
 
         // Helper to select a recommended movie as the active seed
@@ -1001,7 +1081,7 @@
                         </div>
                     `;
                 }
-            } else {
+            } else if (currentStrategy === 'collaborative') {
                 if (currentMode === 'seed') {
                     explanationContent.innerHTML = `
                         <p class="explanation-text">
@@ -1045,6 +1125,47 @@
                                 To show this predicted rating as a percentage score, we map the scale of 1.0 - 5.0 to a 0% - 100% match score:
                             </p>
                             \[Match\_Score = \frac{\hat{R}_{u, i} - 1}{4} \times 100\%\]
+                        </div>
+                    `;
+                }
+            } else {
+                if (currentMode === 'seed') {
+                    explanationContent.innerHTML = `
+                        <p class="explanation-text">
+                            <strong>Hybrid Ensemble Filtering (Single Movie)</strong> computes a balanced ensemble combining both textual content similarity and user interaction co-occurrence patterns.
+                        </p>
+                        <div class="math-block">
+                            <h4>1. Weighted Linear Ensemble</h4>
+                            <p class="explanation-text">
+                                We combine normalized Content Similarity \(S_{\text{content}}\) and Collaborative Similarity \(S_{\text{collab}}\) using equal ensemble weighting (\(\alpha = 0.5\)):
+                            </p>
+                            \[S_{\text{hybrid}}(\text{Seed}, B) = \alpha \cdot S_{\text{content}}(\text{Seed}, B) + (1 - \alpha) \cdot S_{\text{collab}}(\text{Seed}, B)\]
+                        </div>
+                        <div class="math-block">
+                            <h4>2. Recommender Advantages</h4>
+                            <p class="explanation-text" style="margin-bottom: 0; font-size: 0.85rem; color: var(--text-muted);">
+                                <strong>Cold-Start Mitigation:</strong> Content features ensure new or rarely rated films can still be discovered.<br>
+                                <strong>Serendipity & Diversity:</strong> Collaborative filtering introduces cross-genre titles that users frequently enjoy together.
+                            </p>
+                        </div>
+                    `;
+                } else {
+                    explanationContent.innerHTML = `
+                        <p class="explanation-text">
+                            <strong>Personalized Hybrid Model</strong> matches candidate movies against the user's aggregate TF-IDF taste profile while simultaneously predicting ratings via collaborative item similarity.
+                        </p>
+                        <div class="math-block">
+                            <h4>1. Dual-Model Match Ensemble</h4>
+                            <p class="explanation-text">
+                                Unrated candidate movies \(i\) receive a blended match score combining profile alignment \(P_{\text{content}}\) and predicted collaborative rating percentage \(P_{\text{collab}}\):
+                            </p>
+                            \[Match\_Score(i) = 0.5 \cdot P_{\text{content}}(i) + 0.5 \cdot P_{\text{collab}}(i)\]
+                        </div>
+                        <div class="math-block">
+                            <h4>2. Robust Personalization</h4>
+                            <p class="explanation-text" style="margin-bottom: 0; font-size: 0.85rem; color: var(--text-muted);">
+                                If collaborative signals are sparse for a specific candidate, the user's content profile provides a stable fallback, ensuring consistent high-quality recommendations.
+                            </p>
                         </div>
                     `;
                 }
