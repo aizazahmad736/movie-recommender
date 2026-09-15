@@ -2,23 +2,17 @@ import os
 import json
 import pandas as pd
 import numpy as np
+from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import Dict, List, Optional
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import uvicorn
 
-app = FastAPI(title="CineMatch API Server")
-
-# Enable CORS for frontend requests
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Global variables for data and model matrices
 df_movies = None
@@ -29,13 +23,13 @@ collab_sim = None
 movie_id_to_idx = {}
 idx_to_movie_id = {}
 
-@app.on_event("startup")
+
 def load_data_and_train():
     global df_movies, df_ratings, tfidf_matrix, content_sim, collab_sim, movie_id_to_idx, idx_to_movie_id
     
     # Ensure data directory paths are correct
-    movies_path = os.path.join('data', 'movies.csv')
-    ratings_path = os.path.join('data', 'ratings.csv')
+    movies_path = os.path.join(BASE_DIR, 'data', 'movies.csv')
+    ratings_path = os.path.join(BASE_DIR, 'data', 'ratings.csv')
     
     if not os.path.exists(movies_path) or not os.path.exists(ratings_path):
         raise FileNotFoundError("Data files (movies.csv / ratings.csv) not found. Please run generate_data.py first.")
@@ -65,10 +59,38 @@ def load_data_and_train():
     collab_sim = cosine_similarity(user_item_matrix_filled)
     print("Backend engine loaded and precomputed similarity matrices successfully.")
 
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    load_data_and_train()
+    yield
+
+
+app = FastAPI(title="CineMatch API Server", lifespan=lifespan)
+
+# Enable CORS for frontend requests
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+@app.get("/")
+def serve_index():
+    """Serves the CineMatch frontend directly from root URL."""
+    index_path = os.path.join(BASE_DIR, "index.html")
+    if not os.path.exists(index_path):
+        raise HTTPException(status_code=404, detail="index.html not found.")
+    return FileResponse(index_path)
+
+
 # Input Pydantic model for recommendations
 class RecommendRequest(BaseModel):
     seed_id: int
-    user_ratings: Dict[str, float]  # Format: {"movie_id": rating_val}
+    user_ratings: Dict[str, float] = {}  # Format: {"movie_id": rating_val}
 
 @app.get("/api/movies")
 def get_movies():
@@ -129,16 +151,39 @@ def get_recommendations(req: RecommendRequest):
             "score": round(float(score) * 100, 1)
         })
 
+    # C. Hybrid (Ensemble) recommendations for this seed movie
+    # Combines normalized content-based and collaborative similarity: 0.5 * content + 0.5 * collab
+    seed_hybrid_candidates = []
+    for idx in range(len(df_movies)):
+        m_id = idx_to_movie_id[idx]
+        if m_id == seed_id:
+            continue
+        c_score = max(0.0, float(content_sim[seed_idx, idx]))
+        col_score = max(0.0, float(collab_sim[seed_idx, idx]))
+        hybrid_score = (0.5 * c_score + 0.5 * col_score) * 100
+        seed_hybrid_candidates.append((idx, hybrid_score))
+
+    seed_hybrid_candidates = sorted(seed_hybrid_candidates, key=lambda x: x[1], reverse=True)
+    seed_hybrid_recs = []
+    for idx, score in seed_hybrid_candidates[:5]:
+        m_id = idx_to_movie_id[idx]
+        r_movie = df_movies.iloc[idx]
+        seed_hybrid_recs.append({
+            "id": int(m_id),
+            "title": r_movie['title'],
+            "genre": r_movie['genre'],
+            "score": round(score, 1)
+        })
+
     # --- 2. PERSONALIZED RECOMMENDATIONS (Based on ALL active user ratings) ---
     # Initialize response structures
     pers_content_recs = []
     pers_collab_recs = []
+    pers_hybrid_recs = []
     
     if user_ratings_parsed:
         # A. Personalized Content-Based via User Profile Vector
         # We build a user profile: sum of movie TF-IDF vectors weighted by centered ratings (rating - 3.0)
-        # Ratings centered around 3.0 so 4-5 are positive preferences, 1-2 are negative preferences.
-        # If all ratings are 3.0, we just use raw ratings to avoid a zero-vector.
         ratings_mean = np.mean(list(user_ratings_parsed.values()))
         centering_factor = 3.0 if ratings_mean != 3.0 else 0.0
         
@@ -149,12 +194,10 @@ def get_recommendations(req: RecommendRequest):
                 weight = rating - centering_factor
                 user_profile_vec += tfidf_matrix[m_idx].toarray()[0] * weight
                 
-        # If user vector is non-zero, compute cosine similarity with all movie vectors
+        pers_cb_all = {}
         norm = np.linalg.norm(user_profile_vec)
         if norm > 0:
             user_profile_vec = user_profile_vec / norm
-            # Compute cosine similarity manually
-            # movie vectors are normalized in tfidf_matrix
             sims = tfidf_matrix.dot(user_profile_vec)
             pers_cb_scores = list(enumerate(sims))
             pers_cb_scores = sorted(pers_cb_scores, key=lambda x: x[1], reverse=True)
@@ -163,19 +206,20 @@ def get_recommendations(req: RecommendRequest):
                 m_id = idx_to_movie_id[idx]
                 if m_id in user_ratings_parsed:  # Exclude already rated movies
                     continue
-                if len(pers_content_recs) >= 5:
-                    break
-                r_movie = df_movies.iloc[idx]
-                pers_content_recs.append({
-                    "id": int(m_id),
-                    "title": r_movie['title'],
-                    "genre": r_movie['genre'],
-                    "score": round(max(0.0, float(score)) * 100, 1)
-                })
+                score_pct = round(max(0.0, float(score)) * 100, 1)
+                pers_cb_all[idx] = score_pct
+                if len(pers_content_recs) < 5:
+                    r_movie = df_movies.iloc[idx]
+                    pers_content_recs.append({
+                        "id": int(m_id),
+                        "title": r_movie['title'],
+                        "genre": r_movie['genre'],
+                        "score": score_pct
+                    })
         
         # B. Personalized Collaborative filtering using Item-Item similarity
-        # For each unrated movie i, predicted_rating = sum(sim(i, j) * rating(j)) / sum(|sim(i, j)|)
         predicted_ratings = []
+        pers_collab_all = {}
         for idx in range(len(df_movies)):
             m_id = idx_to_movie_id[idx]
             if m_id in user_ratings_parsed:  # Exclude already rated movies
@@ -189,17 +233,16 @@ def get_recommendations(req: RecommendRequest):
                     rated_idx = movie_id_to_idx[rated_id]
                     sim_val = collab_sim[idx, rated_idx]
                     
-                    # We only consider items with positive similarity to avoid negative correlations distorting rating scale
+                    # Positive similarity items only
                     if sim_val > 0:
                         sim_sum += sim_val
                         weighted_rating_sum += sim_val * rating
             
             if sim_sum > 0:
                 pred_rating = weighted_rating_sum / sim_sum
-                # Normalize predicted rating (1-5) to a match percentage (0-100%)
-                # 1 star -> 0% match, 5 stars -> 100% match
-                pct_match = ((pred_rating - 1) / 4) * 100
+                pct_match = round(min(100.0, max(0.0, ((pred_rating - 1) / 4) * 100)), 1)
                 predicted_ratings.append((idx, pct_match))
+                pers_collab_all[idx] = pct_match
                 
         predicted_ratings = sorted(predicted_ratings, key=lambda x: x[1], reverse=True)
         for idx, score in predicted_ratings[:5]:
@@ -209,7 +252,33 @@ def get_recommendations(req: RecommendRequest):
                 "id": int(m_id),
                 "title": r_movie['title'],
                 "genre": r_movie['genre'],
-                "score": round(float(score), 1)
+                "score": score
+            })
+
+        # C. Personalized Hybrid Ensemble
+        # Candidate set: unrated movies scored by content and/or collaborative models
+        all_candidate_indices = set(pers_cb_all.keys()).union(set(pers_collab_all.keys()))
+        hybrid_candidates = []
+        for idx in all_candidate_indices:
+            has_cb = idx in pers_cb_all
+            has_collab = idx in pers_collab_all
+            if has_cb and has_collab:
+                h_score = round(0.5 * pers_cb_all[idx] + 0.5 * pers_collab_all[idx], 1)
+            elif has_cb:
+                h_score = pers_cb_all[idx]
+            else:
+                h_score = pers_collab_all[idx]
+            hybrid_candidates.append((idx, h_score))
+
+        hybrid_candidates = sorted(hybrid_candidates, key=lambda x: x[1], reverse=True)
+        for idx, score in hybrid_candidates[:5]:
+            m_id = idx_to_movie_id[idx]
+            r_movie = df_movies.iloc[idx]
+            pers_hybrid_recs.append({
+                "id": int(m_id),
+                "title": r_movie['title'],
+                "genre": r_movie['genre'],
+                "score": score
             })
             
     # Fallbacks if user has no ratings or calculations yield no results
@@ -217,6 +286,8 @@ def get_recommendations(req: RecommendRequest):
         pers_content_recs = seed_content_recs
     if not pers_collab_recs:
         pers_collab_recs = seed_collab_recs
+    if not pers_hybrid_recs:
+        pers_hybrid_recs = seed_hybrid_recs
 
     # Return structured payload
     return {
@@ -228,10 +299,16 @@ def get_recommendations(req: RecommendRequest):
         },
         "seed_based": {
             "content_based": seed_content_recs,
-            "collaborative": seed_collab_recs
+            "collaborative": seed_collab_recs,
+            "hybrid": seed_hybrid_recs
         },
         "personalized": {
             "content_based": pers_content_recs,
-            "collaborative": pers_collab_recs
+            "collaborative": pers_collab_recs,
+            "hybrid": pers_hybrid_recs
         }
     }
+
+
+if __name__ == "__main__":
+    uvicorn.run("app:app", host="127.0.0.1", port=5000, reload=True)
