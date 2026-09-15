@@ -87,6 +87,27 @@ for idx, row in df_movies.iterrows():
         # Fallback to general popular movies if no collaborative ratings exist
         collab_recs = content_recs
 
+    # 3. Hybrid Filtering Recommendations (50% Content + 50% Collaborative)
+    hybrid_candidates = []
+    for r_idx in range(len(df_movies)):
+        if r_idx == idx:
+            continue
+        c_score = max(0.0, float(content_sim[idx, r_idx]))
+        col_score = max(0.0, float(collab_sim[idx, r_idx]))
+        h_score = (0.5 * c_score + 0.5 * col_score) * 100
+        hybrid_candidates.append((r_idx, h_score))
+
+    hybrid_candidates = sorted(hybrid_candidates, key=lambda x: x[1], reverse=True)
+    hybrid_recs = []
+    for r_idx, score in hybrid_candidates[:5]:
+        r_movie = df_movies.iloc[r_idx]
+        hybrid_recs.append({
+            "id": int(r_movie['id']),
+            "title": r_movie['title'],
+            "genre": r_movie['genre'],
+            "score": round(score, 1)
+        })
+
     # Store in output database
     output_data[str(movie_id)] = {
         "id": movie_id,
@@ -94,7 +115,8 @@ for idx, row in df_movies.iterrows():
         "genre": row['genre'],
         "description": row['description'],
         "content_based": content_recs,
-        "collaborative": collab_recs
+        "collaborative": collab_recs,
+        "hybrid": hybrid_recs
     }
 
 # Save database to JSON file
