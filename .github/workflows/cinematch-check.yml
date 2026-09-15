@@ -25,5 +25,18 @@ jobs:
           grep -q "<html" index.html
           grep -q "</html>" index.html
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run automated test suite
+        run: python -m unittest test_app.py
+
       - name: Project check successful
-        run: echo "CineMatch project checks passed successfully!"
+        run: echo "CineMatch project checks and test suite passed successfully!"
